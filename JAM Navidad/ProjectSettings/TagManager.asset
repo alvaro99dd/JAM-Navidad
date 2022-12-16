@@ -7,6 +7,9 @@ TagManager:
   - Rune
   - BabySloth
   - Floor
+  - BadFloor
+  - Staff
+  - Wall
   layers:
   - Default
   - TransparentFX

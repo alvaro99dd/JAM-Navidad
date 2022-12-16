@@ -5,12 +5,14 @@ using UnityEngine;
 public class PlayerJump : MonoBehaviour {
     CharacterController cC;
     PlayerController pC;
+    public TravelToStaff toStaff;
 
     Vector3 playerVelocity;
     public float staffJumpHeight;
     public float staffRollHeight;
     public float jumpHeight;
     public float rollJumpHeight;
+    public float hangedHeight;
     float height;
     public float gravityValue;
     bool groundedPlayer;
@@ -19,7 +21,6 @@ public class PlayerJump : MonoBehaviour {
     bool jumpPressed = false;
     public float maxDistance;
     public LayerMask interactableLayers;
-    public Transform foot;
 
     private void Awake() {
         cC = GetComponent<CharacterController>();
@@ -47,7 +48,12 @@ public class PlayerJump : MonoBehaviour {
                 if (CollectableManager.instance.staffJump && transform.Find("StaffHolder").childCount > 0 && !airJump) {
                     height = staffJumpHeight;
                 } else {
-                    height = jumpHeight;
+                    if (toStaff.hanged) {
+                        toStaff.hanged = false;
+                        height = hangedHeight;
+                    } else {
+                        height = jumpHeight;
+                    }
                 }
             } else {
                 if (CollectableManager.instance.staffJump && transform.Find("StaffHolder").childCount > 0 && !airJump) {
@@ -68,6 +74,10 @@ public class PlayerJump : MonoBehaviour {
     void OnJump() {
         Debug.Log("Jump pressed");
 
+        if (toStaff.hanged) {
+            toStaff.StopHanging();
+        }
+
         if (cC.isGrounded) {
             Debug.Log("Can jump");
             if (pC.rollCoroutine != null) {
@@ -76,7 +86,7 @@ public class PlayerJump : MonoBehaviour {
             }
             jumpPressed = true;
         } else {
-            if (!airJump) {
+            if (!airJump || toStaff.hanged) {
                 jumpPressed = true;
                 airJump = true;
             } else {

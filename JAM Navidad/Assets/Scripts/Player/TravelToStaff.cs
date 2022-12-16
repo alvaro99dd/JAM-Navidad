@@ -5,12 +5,12 @@ using UnityEngine;
 public class TravelToStaff : MonoBehaviour
 {
     Transform playerStandingPoint;
+    StaffBehaviour sB;
     public Transform player;
     CharacterController playercC;
     public PlayerJump pJ;
     public PlayerController pC;
     public Coroutine travelStaff;
-    public float minDistance;
     public float timeToTravel;
     bool collision;
     public bool hanged;
@@ -20,27 +20,32 @@ public class TravelToStaff : MonoBehaviour
         pJ = player.GetComponent<PlayerJump>();
         pC = player.GetComponent<PlayerController>();
         playerStandingPoint = transform.GetChild(0);
+        sB = GetComponent<StaffBehaviour>();
     }
 
     void OnTravel() {
-        if (transform.parent || travelStaff != null) {
+        if (pC.rolling || !sB.collide || travelStaff != null) {
             return;
         }
         Vector3 dir = playerStandingPoint.position - player.position;
+        if (Vector3.Distance(playerStandingPoint.position, player.position) < 10) {
+            timeToTravel = 3f;
+        } else {
+            timeToTravel = 1f;
+        }
         travelStaff = StartCoroutine(MoveToStaff(dir));
     }
 
     IEnumerator MoveToStaff(Vector3 dir) {
-        pJ.enabled = false;
-        pC.enabled = false;
         //GetComponent<Collider>().isTrigger = true;
+        pC.enabled = false;
+        pJ.enabled = false;
         Physics.IgnoreLayerCollision(6, 7, true);
         while (!collision) {
             playercC.Move(dir * timeToTravel * Time.deltaTime);
             yield return new WaitForEndOfFrame();
         }
         //GetComponent<Collider>().isTrigger = false;
-        Physics.IgnoreLayerCollision(6, 7, false);
         travelStaff = null;
         collision = false;
         HangOnStaff();
@@ -58,7 +63,12 @@ public class TravelToStaff : MonoBehaviour
     //AL PULSAR W SUBIR
     public void StopHanging() {
         playercC.enabled = true;
-        hanged = false;
+        StartCoroutine(ActivateCollision());
+    }
+
+    IEnumerator ActivateCollision() {
+        yield return new WaitForSeconds(0.7f);
+        Physics.IgnoreLayerCollision(6, 7, false);
     }
 
     public void CancelTravel() {

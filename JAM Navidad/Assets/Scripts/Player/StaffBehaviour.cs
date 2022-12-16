@@ -6,15 +6,16 @@ using UnityEngine;
 public class StaffBehaviour : MonoBehaviour {
     Rigidbody rB;
     Transform parent;
-    Collider capsuleCollider;
+    Collider objectCollider;
     TravelToStaff travelScript;
     //AnimationCurve yCurve;
     public Transform staffLimit;
     public Transform reference;
     Vector3 tempPosition;
+    string tempTag;
     bool lerping;
     bool comingBack;
-    bool collide;
+    public bool collide;
 
     public float throwSpeed;
     public float maxDistance;
@@ -29,8 +30,8 @@ public class StaffBehaviour : MonoBehaviour {
     private void Awake() {
         rB = GetComponent<Rigidbody>();
         parent = transform.parent;
-        capsuleCollider = GetComponent<Collider>();
         travelScript = GetComponent<TravelToStaff>();
+        objectCollider = GetComponent<Collider>();
     }
 
     private void FixedUpdate() {
@@ -46,8 +47,10 @@ public class StaffBehaviour : MonoBehaviour {
         Ray cameraRay = new Ray(Camera.main.transform.position, Camera.main.transform.forward);
         if (Physics.Raycast(cameraRay, out RaycastHit hitInfo, maxDistance, interactableLayers)) {
             staffLimit.position = hitInfo.point;
+            staffLimit.tag = hitInfo.transform.tag;
         } else {
             staffLimit.position = reference.position;
+            staffLimit.tag = reference.tag;
         }
     }
 
@@ -63,6 +66,9 @@ public class StaffBehaviour : MonoBehaviour {
             if (travelScript.travelStaff != null) {
                 travelScript.CancelTravel();
             }
+            if (travelScript.hanged) {
+                travelScript.StopHanging();
+            }
             StartCoroutine(BackToPlayer());
         }
 
@@ -74,6 +80,8 @@ public class StaffBehaviour : MonoBehaviour {
 
     IEnumerator LerpPosition() {
         tempPosition = staffLimit.position;
+        tempTag = staffLimit.tag;
+
         lerping = true;
         transform.SetParent(null);
 
@@ -81,13 +89,14 @@ public class StaffBehaviour : MonoBehaviour {
             rB.position = Vector3.MoveTowards(transform.position, tempPosition, time * Time.deltaTime);
             yield return new WaitForEndOfFrame();
         }
-        capsuleCollider.enabled = true;
+        //CheckTag();
         lerping = false;
+        objectCollider.enabled = true;
         goBack = StartCoroutine(GoBackCountdown());
     }
 
     IEnumerator BackToPlayer() {
-        capsuleCollider.enabled = false;
+        objectCollider.enabled = false;
         rB.isKinematic = false;
         comingBack = true;
         tempPosition = parent.position;
@@ -116,13 +125,15 @@ public class StaffBehaviour : MonoBehaviour {
             return;
         }
 
-        if (collision.collider.CompareTag("Floor")) {
+        if (tempTag == "Floor" || tempTag == "Wall") {
             if (goBack != null) {
                 StopCoroutine(goBack);
             }
             //StopCoroutine(staffCoroutine);
             lerping = false;
             collide = true;
+            objectCollider.enabled = true;
+
             rB.velocity = Vector3.zero;
             rB.angularVelocity = Vector3.zero;
 
@@ -134,6 +145,8 @@ public class StaffBehaviour : MonoBehaviour {
             if (Vector3.Distance(parent.position, transform.position) < antiBugDistance) {
                 rB.isKinematic = true;
             }
+        } else {
+            StartCoroutine(BackToPlayer());
         }
     }
 }

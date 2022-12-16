@@ -6,6 +6,9 @@ using Cinemachine;
 public class PlayerController : MonoBehaviour {
     Controls c;
     CharacterController cC;
+    float originalCenter;
+    float originalHeight;
+    public TravelToStaff toStaff;
 
     public Transform cam;
     public Transform rollPosition;
@@ -17,6 +20,8 @@ public class PlayerController : MonoBehaviour {
     [Header("Roll")]
     public float rollSpeed;
     public bool rolling;
+    public float colliderHeight;
+    public float colliderCenter;
 
     public float rollTime;
     public IEnumerator rollCoroutine;
@@ -27,6 +32,8 @@ public class PlayerController : MonoBehaviour {
         c = new Controls();
         c.Enable();
         cC = GetComponent<CharacterController>();
+        originalCenter = cC.center.y;
+        originalHeight = cC.height;
     }
 
     private void Update() {
@@ -57,6 +64,9 @@ public class PlayerController : MonoBehaviour {
     IEnumerator RollAction() {
         if (!cC.isGrounded) {
             airRolling = true;
+        } else {
+            cC.height = colliderHeight;
+            cC.center = new Vector3(0, colliderCenter, 0);
         }
 
         rolling = true;
@@ -73,10 +83,12 @@ public class PlayerController : MonoBehaviour {
             yield return new WaitForEndOfFrame();
         } while (Time.time < startTime + rollTime * Time.deltaTime);
         rolling = false;
+        cC.height = originalHeight;
+        cC.center = new Vector3(0, originalCenter, 0);
     }
 
     void OnRoll() {
-        if (airRolling) {
+        if (airRolling || toStaff.travelStaff != null) {
             return;
         }
 
