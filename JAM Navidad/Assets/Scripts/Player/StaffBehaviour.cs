@@ -67,6 +67,7 @@ public class StaffBehaviour : MonoBehaviour {
                 travelScript.CancelTravel();
             }
             if (travelScript.hanged) {
+                travelScript.hanged = false;
                 travelScript.StopHanging();
             }
             StartCoroutine(BackToPlayer());

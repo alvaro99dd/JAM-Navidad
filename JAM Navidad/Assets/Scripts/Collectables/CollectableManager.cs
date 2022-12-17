@@ -12,6 +12,7 @@ public class CollectableManager : MonoBehaviour {
     const int runeGoal1 = 1, runeGoal2 = 3, runeGoal3 = 5;
     public bool staffThrow;
     public bool staffJump;
+    public bool staffTravel;
     public int runes;
 
     public PlayerJump pJ;
@@ -44,6 +45,7 @@ public class CollectableManager : MonoBehaviour {
                 staffThrow = true;
                 break;
             case runeGoal3:
+                staffTravel = true;
                 break;
             default:
                 break;

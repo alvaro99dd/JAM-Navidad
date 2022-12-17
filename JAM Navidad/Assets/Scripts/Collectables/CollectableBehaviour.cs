@@ -17,7 +17,8 @@ public class CollectableBehaviour : MonoBehaviour
                     break;
             }
             CollectableManager.instance.CheckCollectable();
-            gameObject.SetActive(false);
+            //gameObject.SetActive(false);
+            Destroy(gameObject);
         }
     }
 }

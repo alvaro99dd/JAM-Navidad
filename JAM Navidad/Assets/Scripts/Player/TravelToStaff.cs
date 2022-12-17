@@ -24,7 +24,7 @@ public class TravelToStaff : MonoBehaviour
     }
 
     void OnTravel() {
-        if (pC.rolling || !sB.collide || travelStaff != null) {
+        if (!CollectableManager.instance.staffTravel || pC.rolling || !sB.collide || travelStaff != null) {
             return;
         }
         Vector3 dir = playerStandingPoint.position - player.position;

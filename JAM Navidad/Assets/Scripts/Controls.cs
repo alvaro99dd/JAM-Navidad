@@ -53,6 +53,15 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Meditate"",
+                    ""type"": ""Button"",
+                    ""id"": ""1d7ba1b8-5c18-4570-ae41-ce5a368e81ab"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -209,6 +218,17 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                     ""action"": ""Roll"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d60c7789-1e94-4a22-8996-9c36067ae177"",
+                    ""path"": ""<Keyboard>/tab"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Meditate"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -268,6 +288,7 @@ public partial class @Controls : IInputActionCollection2, IDisposable
         m_Movement_Move = m_Movement.FindAction("Move", throwIfNotFound: true);
         m_Movement_Jump = m_Movement.FindAction("Jump", throwIfNotFound: true);
         m_Movement_Roll = m_Movement.FindAction("Roll", throwIfNotFound: true);
+        m_Movement_Meditate = m_Movement.FindAction("Meditate", throwIfNotFound: true);
         // Skills
         m_Skills = asset.FindActionMap("Skills", throwIfNotFound: true);
         m_Skills_Throw = m_Skills.FindAction("Throw", throwIfNotFound: true);
@@ -334,6 +355,7 @@ public partial class @Controls : IInputActionCollection2, IDisposable
     private readonly InputAction m_Movement_Move;
     private readonly InputAction m_Movement_Jump;
     private readonly InputAction m_Movement_Roll;
+    private readonly InputAction m_Movement_Meditate;
     public struct MovementActions
     {
         private @Controls m_Wrapper;
@@ -341,6 +363,7 @@ public partial class @Controls : IInputActionCollection2, IDisposable
         public InputAction @Move => m_Wrapper.m_Movement_Move;
         public InputAction @Jump => m_Wrapper.m_Movement_Jump;
         public InputAction @Roll => m_Wrapper.m_Movement_Roll;
+        public InputAction @Meditate => m_Wrapper.m_Movement_Meditate;
         public InputActionMap Get() { return m_Wrapper.m_Movement; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -359,6 +382,9 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                 @Roll.started -= m_Wrapper.m_MovementActionsCallbackInterface.OnRoll;
                 @Roll.performed -= m_Wrapper.m_MovementActionsCallbackInterface.OnRoll;
                 @Roll.canceled -= m_Wrapper.m_MovementActionsCallbackInterface.OnRoll;
+                @Meditate.started -= m_Wrapper.m_MovementActionsCallbackInterface.OnMeditate;
+                @Meditate.performed -= m_Wrapper.m_MovementActionsCallbackInterface.OnMeditate;
+                @Meditate.canceled -= m_Wrapper.m_MovementActionsCallbackInterface.OnMeditate;
             }
             m_Wrapper.m_MovementActionsCallbackInterface = instance;
             if (instance != null)
@@ -372,6 +398,9 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                 @Roll.started += instance.OnRoll;
                 @Roll.performed += instance.OnRoll;
                 @Roll.canceled += instance.OnRoll;
+                @Meditate.started += instance.OnMeditate;
+                @Meditate.performed += instance.OnMeditate;
+                @Meditate.canceled += instance.OnMeditate;
             }
         }
     }
@@ -422,6 +451,7 @@ public partial class @Controls : IInputActionCollection2, IDisposable
         void OnMove(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
         void OnRoll(InputAction.CallbackContext context);
+        void OnMeditate(InputAction.CallbackContext context);
     }
     public interface ISkillsActions
     {
