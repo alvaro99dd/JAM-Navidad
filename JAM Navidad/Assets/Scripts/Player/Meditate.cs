@@ -24,7 +24,7 @@ public class Meditate : MonoBehaviour {
 
         if (meditating) {
             Vector3 runePosition;
-            if (runesContainer.childCount > 0) {
+            if (!CollectableManager.instance.staffTravel) {
                 runePosition = Setup().position;
             } else {
                 runePosition = transform.position;
@@ -49,19 +49,30 @@ public class Meditate : MonoBehaviour {
     }
 
     Transform Setup() {
-
         float currentDistance;
         Transform runeToSearch = runesContainer.GetChild(0);
 
         minDistance = Vector3.Distance(transform.position, runesContainer.GetChild(0).position);
-        foreach (Transform item in runesContainer.GetComponentInChildren<Transform>()) {
-            currentDistance = Vector3.Distance(transform.position, item.position);
-            if (currentDistance < minDistance) {
-                minDistance = currentDistance;
-                runeToSearch = item;
+        for (int i = 0; i < runesContainer.childCount; i++) {
+            for (int x = 0; x < runesContainer.GetChild(i).childCount; x++) {
+                currentDistance = Vector3.Distance(transform.position, runesContainer.GetChild(i).GetChild(x).position);
+                if (currentDistance < minDistance) {
+                    minDistance = currentDistance;
+                    runeToSearch = runesContainer.GetChild(i).GetChild(x);
+                }
             }
         }
 
         return runeToSearch;
+
+        //foreach (Transform item in runesContainer.GetComponentInChildren<Transform>()) {
+        //    currentDistance = Vector3.Distance(transform.position, item.position);
+        //    if (currentDistance < minDistance) {
+        //        minDistance = currentDistance;
+        //        runeToSearch = item;
+        //    }
+        //}
+
+        //return runeToSearch;
     }
 }

@@ -8,12 +8,13 @@ public enum Collectables {
 
 public class CollectableManager : MonoBehaviour {
     public Collectables collectables;
+    public RuneType runeType;
     //CAMBIAR
-    const int runeGoal1 = 1, runeGoal2 = 3, runeGoal3 = 5;
     public bool staffThrow;
     public bool staffJump;
     public bool staffTravel;
-    public int runes;
+    public int currentWaterRunes, currentEarthRunes, currentFireRunes;
+    public int maxWaterRunes, maxEarthRunes, maxFireRunes;
 
     public PlayerJump pJ;
     public static CollectableManager instance;
@@ -22,6 +23,7 @@ public class CollectableManager : MonoBehaviour {
         if (!instance) {
             instance = this;
         }
+        Setup();
     }
 
     public void CheckCollectable() {
@@ -37,19 +39,30 @@ public class CollectableManager : MonoBehaviour {
     }
 
     void RuneBehaviour() {
-        switch (++runes) {
-            case runeGoal1:
-                staffJump = true;
+        switch (runeType) {
+            case RuneType.earth:
+                staffJump = ++currentEarthRunes >= maxEarthRunes;
+                GameManager.instance.earthRunes.text = $"{currentEarthRunes} / {maxEarthRunes}";
                 break;
-            case runeGoal2:
-                staffThrow = true;
+            case RuneType.water:
+                staffThrow = ++currentWaterRunes >= maxWaterRunes;
+                GameManager.instance.waterRunes.text = $"{currentWaterRunes} / {maxWaterRunes}";
                 break;
-            case runeGoal3:
-                staffTravel = true;
+            case RuneType.fire:
+                staffTravel = ++currentFireRunes >= maxFireRunes;
+                GameManager.instance.fireRunes.text = $"{currentFireRunes} / {maxFireRunes}";
                 break;
             default:
                 break;
         }
+
         Debug.LogWarning("CAMBIAR METAS");
+    }
+
+    void Setup() {
+        Transform runeParent = transform.Find("Runes");
+        maxEarthRunes = runeParent.GetChild(0).childCount;
+        maxWaterRunes = runeParent.GetChild(1).childCount;
+        maxFireRunes = runeParent.GetChild(2).childCount;
     }
 }

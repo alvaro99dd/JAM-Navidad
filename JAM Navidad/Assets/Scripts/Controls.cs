@@ -229,6 +229,17 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                     ""action"": ""Meditate"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""38bcc1a8-ff4e-4c8d-962d-b12bac13548b"",
+                    ""path"": ""<Gamepad>/leftTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Meditate"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -269,12 +280,73 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""52287abe-ed81-480c-b82e-91052779cf52"",
+                    ""path"": ""<Gamepad>/rightShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Throw"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""c33b2958-c393-48f0-a98e-8eceb41295f4"",
                     ""path"": ""<Keyboard>/f"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Travel"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c9a25b93-3795-4e4f-acf2-8fbf4897989b"",
+                    ""path"": ""<Gamepad>/rightTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Travel"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""GameActions"",
+            ""id"": ""6fda4db3-ad7d-440b-aaf6-9b25d3c71b7e"",
+            ""actions"": [
+                {
+                    ""name"": ""Pause"",
+                    ""type"": ""Button"",
+                    ""id"": ""7931aee0-1424-4e35-8776-e125eb815e34"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""147dbc93-d1f8-4a7e-9d72-0abaa8272aec"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f757112f-ab8f-4fda-b79b-5fe6178f603a"",
+                    ""path"": ""<Gamepad>/start"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pause"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -293,6 +365,9 @@ public partial class @Controls : IInputActionCollection2, IDisposable
         m_Skills = asset.FindActionMap("Skills", throwIfNotFound: true);
         m_Skills_Throw = m_Skills.FindAction("Throw", throwIfNotFound: true);
         m_Skills_Travel = m_Skills.FindAction("Travel", throwIfNotFound: true);
+        // GameActions
+        m_GameActions = asset.FindActionMap("GameActions", throwIfNotFound: true);
+        m_GameActions_Pause = m_GameActions.FindAction("Pause", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -446,6 +521,39 @@ public partial class @Controls : IInputActionCollection2, IDisposable
         }
     }
     public SkillsActions @Skills => new SkillsActions(this);
+
+    // GameActions
+    private readonly InputActionMap m_GameActions;
+    private IGameActionsActions m_GameActionsActionsCallbackInterface;
+    private readonly InputAction m_GameActions_Pause;
+    public struct GameActionsActions
+    {
+        private @Controls m_Wrapper;
+        public GameActionsActions(@Controls wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Pause => m_Wrapper.m_GameActions_Pause;
+        public InputActionMap Get() { return m_Wrapper.m_GameActions; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(GameActionsActions set) { return set.Get(); }
+        public void SetCallbacks(IGameActionsActions instance)
+        {
+            if (m_Wrapper.m_GameActionsActionsCallbackInterface != null)
+            {
+                @Pause.started -= m_Wrapper.m_GameActionsActionsCallbackInterface.OnPause;
+                @Pause.performed -= m_Wrapper.m_GameActionsActionsCallbackInterface.OnPause;
+                @Pause.canceled -= m_Wrapper.m_GameActionsActionsCallbackInterface.OnPause;
+            }
+            m_Wrapper.m_GameActionsActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @Pause.started += instance.OnPause;
+                @Pause.performed += instance.OnPause;
+                @Pause.canceled += instance.OnPause;
+            }
+        }
+    }
+    public GameActionsActions @GameActions => new GameActionsActions(this);
     public interface IMovementActions
     {
         void OnMove(InputAction.CallbackContext context);
@@ -457,5 +565,9 @@ public partial class @Controls : IInputActionCollection2, IDisposable
     {
         void OnThrow(InputAction.CallbackContext context);
         void OnTravel(InputAction.CallbackContext context);
+    }
+    public interface IGameActionsActions
+    {
+        void OnPause(InputAction.CallbackContext context);
     }
 }
