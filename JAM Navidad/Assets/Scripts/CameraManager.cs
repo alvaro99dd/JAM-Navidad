@@ -11,7 +11,7 @@ public class CameraManager : MonoBehaviour {
 
     public static CameraManager instance;
 
-    private void Start() {
+    private void Awake() {
         if (!instance) {
             instance = this;
         }

@@ -8,6 +8,7 @@ public class StaffBehaviour : MonoBehaviour {
     Transform parent;
     Collider objectCollider;
     TravelToStaff travelScript;
+    public Animator playerAnim;
     //AnimationCurve yCurve;
     public Transform staffLimit;
     public Transform reference;
@@ -80,6 +81,7 @@ public class StaffBehaviour : MonoBehaviour {
     }
 
     IEnumerator LerpPosition() {
+        playerAnim.SetTrigger("Throw");
         tempPosition = staffLimit.position;
         tempTag = staffLimit.tag;
 
@@ -97,6 +99,7 @@ public class StaffBehaviour : MonoBehaviour {
     }
 
     IEnumerator BackToPlayer() {
+        playerAnim.SetTrigger("Catch");
         objectCollider.enabled = false;
         rB.isKinematic = false;
         comingBack = true;

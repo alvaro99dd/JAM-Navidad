@@ -6,6 +6,7 @@ using Cinemachine;
 public class PlayerController : MonoBehaviour {
     Controls c;
     CharacterController cC;
+    Animator anim;
     float originalCenter;
     float originalHeight;
     public TravelToStaff toStaff;
@@ -34,13 +35,14 @@ public class PlayerController : MonoBehaviour {
         cC = GetComponent<CharacterController>();
         originalCenter = cC.center.y;
         originalHeight = cC.height;
+        anim = GetComponentInChildren<Animator>();
     }
 
     private void Update() {
-        if (!CameraManager.instance.isAiming) {
-            MovePlayer();
-
-        }
+        //if (!CameraManager.instance.isAiming) {
+        MovePlayer();
+        //}
+        anim.SetBool("Grounded", cC.isGrounded);
     }
 
     void MovePlayer() {
@@ -62,13 +64,13 @@ public class PlayerController : MonoBehaviour {
 
             cC.Move(moveDir * speed * Time.deltaTime);
         }
+        anim.SetFloat("Vspeed", direction.magnitude);
     }
 
     IEnumerator RollAction() {
         if (!cC.isGrounded) {
             airRolling = true;
-        }
-        else {
+        } else {
             cC.height = colliderHeight;
             cC.center = new Vector3(0, colliderCenter, 0);
         }
@@ -80,8 +82,7 @@ public class PlayerController : MonoBehaviour {
         do {
             if (cC.isGrounded) {
                 dir.y = -4.5f;
-            }
-            else {
+            } else {
                 dir.y = 0f;
             }
             cC.Move(dir * rollSpeed * Time.deltaTime);
