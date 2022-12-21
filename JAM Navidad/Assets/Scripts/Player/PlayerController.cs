@@ -37,7 +37,10 @@ public class PlayerController : MonoBehaviour {
     }
 
     private void Update() {
-        MovePlayer();
+        if (!CameraManager.instance.isAiming) {
+            MovePlayer();
+
+        }
     }
 
     void MovePlayer() {
@@ -64,7 +67,8 @@ public class PlayerController : MonoBehaviour {
     IEnumerator RollAction() {
         if (!cC.isGrounded) {
             airRolling = true;
-        } else {
+        }
+        else {
             cC.height = colliderHeight;
             cC.center = new Vector3(0, colliderCenter, 0);
         }
@@ -76,7 +80,8 @@ public class PlayerController : MonoBehaviour {
         do {
             if (cC.isGrounded) {
                 dir.y = -4.5f;
-            } else {
+            }
+            else {
                 dir.y = 0f;
             }
             cC.Move(dir * rollSpeed * Time.deltaTime);
