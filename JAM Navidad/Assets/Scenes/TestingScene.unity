@@ -17442,7 +17442,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 504226523}
+<<<<<<< HEAD
+<<<<<<< HEAD
   m_LocalRotation: {x: 0.1301824, y: -0.00000001705996, z: 0.0000000022399684, w: 0.99149007}
+=======
+  m_LocalRotation: {x: 0.20188022, y: -0, z: -0, w: 0.97941023}
+>>>>>>> e12cd982bf70ce38cd8087678aa4290067b21c82
+=======
+  m_LocalRotation: {x: 0.043148328, y: -1.9078093e-30, z: -1.0140984e-32, w: 0.9990687}
+>>>>>>> parent of e12cd98 (camarita)
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -19372,8 +19380,18 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 586213497}
+<<<<<<< HEAD
+<<<<<<< HEAD
   m_LocalRotation: {x: 0.029241355, y: 0.0000000018618489, z: -5.4466272e-11, w: 0.9995724}
   m_LocalPosition: {x: 1.57, y: 3.4, z: -6.94}
+=======
+  m_LocalRotation: {x: 0.05822148, y: -0.000000012882895, z: 7.5133566e-10, w: 0.9983037}
+  m_LocalPosition: {x: 1.57, y: 6.28, z: -6.8599997}
+>>>>>>> e12cd982bf70ce38cd8087678aa4290067b21c82
+=======
+  m_LocalRotation: {x: -0.11700174, y: -0.0000000035823893, z: -4.2204448e-10, w: 0.99313176}
+  m_LocalPosition: {x: 1.57, y: 4.4, z: -9.14}
+>>>>>>> parent of e12cd98 (camarita)
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -26347,10 +26365,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 4
+<<<<<<< HEAD
+<<<<<<< HEAD
   m_FollowOffset: {x: 0, y: 1, z: -5.8}
+=======
+  m_FollowOffset: {x: 0, y: 3.88, z: -5.72}
+>>>>>>> e12cd982bf70ce38cd8087678aa4290067b21c82
   m_XDamping: 2
   m_YDamping: 2
   m_ZDamping: 2
+=======
+  m_FollowOffset: {x: 0, y: 2, z: -8}
+  m_XDamping: 1
+  m_YDamping: 1
+  m_ZDamping: 1
+>>>>>>> parent of e12cd98 (camarita)
   m_AngularDampingMode: 0
   m_PitchDamping: 0
   m_YawDamping: 0
@@ -30944,7 +30973,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 954811545}
+<<<<<<< HEAD
+<<<<<<< HEAD
   m_LocalRotation: {x: -0.1537794, y: 0.000000017001712, z: 0.0000000026459868, w: 0.98810524}
+=======
+  m_LocalRotation: {x: 0.09063606, y: 0.0000000042838906, z: -3.898797e-10, w: 0.9958841}
+>>>>>>> e12cd982bf70ce38cd8087678aa4290067b21c82
+=======
+  m_LocalRotation: {x: -0.08466269, y: 3.4979787e-17, z: -1.6793852e-16, w: 0.9964097}
+>>>>>>> parent of e12cd98 (camarita)
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -31472,6 +31509,10 @@ Transform:
   m_Father: {fileID: 504226525}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of e12cd98 (camarita)
 --- !u!114 &977326509
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -31491,6 +31532,7 @@ MonoBehaviour:
   m_HorizontalDamping: 0
   m_VerticalDamping: 0
   m_ScreenX: 0.5
+<<<<<<< HEAD
   m_ScreenY: 0.45
   m_DeadZoneWidth: 0
   m_DeadZoneHeight: 0.32323238
@@ -31499,6 +31541,18 @@ MonoBehaviour:
   m_BiasX: 0
   m_BiasY: 0
   m_CenterOnActivate: 1
+=======
+>>>>>>> e12cd982bf70ce38cd8087678aa4290067b21c82
+=======
+  m_ScreenY: 0.58
+  m_DeadZoneWidth: 0
+  m_DeadZoneHeight: 0
+  m_SoftZoneWidth: 0.8
+  m_SoftZoneHeight: 0.8
+  m_BiasX: 0
+  m_BiasY: -0.10000002
+  m_CenterOnActivate: 1
+>>>>>>> parent of e12cd98 (camarita)
 --- !u!114 &977326510
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -31512,10 +31566,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 4
+<<<<<<< HEAD
+<<<<<<< HEAD
   m_FollowOffset: {x: 0, y: 1, z: -5.8}
   m_XDamping: 2
   m_YDamping: 2
   m_ZDamping: 2
+=======
+  m_FollowOffset: {x: 0, y: 3.88, z: -5.72}
+  m_XDamping: 0
+  m_YDamping: 0
+  m_ZDamping: 0
+>>>>>>> e12cd982bf70ce38cd8087678aa4290067b21c82
+=======
+  m_FollowOffset: {x: 0, y: 2, z: -8}
+  m_XDamping: 1
+  m_YDamping: 1
+  m_ZDamping: 1
+>>>>>>> parent of e12cd98 (camarita)
   m_AngularDampingMode: 0
   m_PitchDamping: 0
   m_YawDamping: 0
@@ -38313,10 +38381,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 4
+<<<<<<< HEAD
+<<<<<<< HEAD
   m_FollowOffset: {x: 0, y: 1, z: -5.8}
+=======
+  m_FollowOffset: {x: 0, y: 3.88, z: -5.72}
+>>>>>>> e12cd982bf70ce38cd8087678aa4290067b21c82
   m_XDamping: 2
   m_YDamping: 2
   m_ZDamping: 2
+=======
+  m_FollowOffset: {x: 0, y: 2, z: -8}
+  m_XDamping: 1
+  m_YDamping: 1
+  m_ZDamping: 1
+>>>>>>> parent of e12cd98 (camarita)
   m_AngularDampingMode: 0
   m_PitchDamping: 0
   m_YawDamping: 0
@@ -60603,7 +60682,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1970419412}
+<<<<<<< HEAD
+<<<<<<< HEAD
   m_LocalRotation: {x: 0.029241359, y: 1e-45, z: -0, w: 0.9995724}
+=======
+  m_LocalRotation: {x: 0.05822149, y: -0.000000006441446, z: 3.756678e-10, w: 0.9983037}
+>>>>>>> e12cd982bf70ce38cd8087678aa4290067b21c82
+=======
+  m_LocalRotation: {x: -0.11700171, y: -0.0000000035823888, z: -4.2204437e-10, w: 0.99313176}
+>>>>>>> parent of e12cd98 (camarita)
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -62030,7 +62117,15 @@ MonoBehaviour:
     Value: 0.5
     m_SpeedMode: 1
     m_MaxSpeed: 0.05
+<<<<<<< HEAD
+<<<<<<< HEAD
     m_AccelTime: 0.1
+=======
+    m_AccelTime: 4
+>>>>>>> e12cd982bf70ce38cd8087678aa4290067b21c82
+=======
+    m_AccelTime: 0.2
+>>>>>>> parent of e12cd98 (camarita)
     m_DecelTime: 0.1
     m_InputAxisName: Mouse Y
     m_InputAxisValue: 0
@@ -62081,12 +62176,30 @@ MonoBehaviour:
   m_BindingMode: 4
   m_SplineCurvature: 0
   m_Orbits:
+<<<<<<< HEAD
+<<<<<<< HEAD
   - m_Height: 3
     m_Radius: 4
   - m_Height: 1
     m_Radius: 5.8
   - m_Height: -0.16
     m_Radius: 4.43
+=======
+  - m_Height: 6.83
+    m_Radius: 4.08
+  - m_Height: 3.88
+    m_Radius: 5.72
+  - m_Height: 0.84
+    m_Radius: 2.14
+>>>>>>> e12cd982bf70ce38cd8087678aa4290067b21c82
+=======
+  - m_Height: 4
+    m_Radius: 4
+  - m_Height: 2
+    m_Radius: 8
+  - m_Height: 0
+    m_Radius: 4
+>>>>>>> parent of e12cd98 (camarita)
   m_LegacyHeadingBias: 3.4028235e+38
   m_Rigs:
   - {fileID: 954811546}
@@ -62100,7 +62213,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2021935693}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+<<<<<<< HEAD
+<<<<<<< HEAD
   m_LocalPosition: {x: 1.57, y: 3.4, z: -6.94}
+=======
+  m_LocalPosition: {x: 1.57, y: 6.28, z: -6.8599997}
+>>>>>>> e12cd982bf70ce38cd8087678aa4290067b21c82
+=======
+  m_LocalPosition: {x: 1.57, y: 4.4, z: -9.14}
+>>>>>>> parent of e12cd98 (camarita)
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -62136,9 +62257,18 @@ MonoBehaviour:
   m_CameraRadius: 0.1
   m_Strategy: 0
   m_MaximumEffort: 4
+<<<<<<< HEAD
   m_SmoothingTime: 0
+<<<<<<< HEAD
   m_Damping: 1.5
   m_DampingWhenOccluded: 3
+=======
+=======
+  m_SmoothingTime: 2
+>>>>>>> parent of e12cd98 (camarita)
+  m_Damping: 0
+  m_DampingWhenOccluded: 0
+>>>>>>> e12cd982bf70ce38cd8087678aa4290067b21c82
   m_OptimalTargetDistance: 0
 --- !u!1 &2025266050
 GameObject:
