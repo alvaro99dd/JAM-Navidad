@@ -41,15 +41,15 @@ public class CollectableManager : MonoBehaviour {
     void RuneBehaviour() {
         switch (runeType) {
             case RuneType.earth:
-                staffJump = ++currentEarthRunes >= maxEarthRunes;
+                staffThrow = ++currentEarthRunes >= maxEarthRunes;
                 //GameManager.instance.earthRunes.text = $"{currentEarthRunes} / {maxEarthRunes}";
                 break;
             case RuneType.water:
-                staffThrow = ++currentWaterRunes >= maxWaterRunes;
+                staffTravel = ++currentWaterRunes >= maxWaterRunes;
                 //GameManager.instance.waterRunes.text = $"{currentWaterRunes} / {maxWaterRunes}";
                 break;
             case RuneType.fire:
-                staffTravel = ++currentFireRunes >= maxFireRunes;
+                staffJump = ++currentFireRunes >= maxFireRunes;
                 //GameManager.instance.fireRunes.text = $"{currentFireRunes} / {maxFireRunes}";
                 break;
             default:
