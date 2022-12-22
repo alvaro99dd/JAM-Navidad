@@ -58,8 +58,12 @@ public class PlayerJump : MonoBehaviour {
             } else {
                 if (CollectableManager.instance.staffJump && transform.Find("StaffHolder").childCount > 0 && !airJump) {
                     height = staffRollHeight;
+                    cC.height = pC.colliderHeight;
+                    cC.center = new Vector3(0, pC.colliderCenter, 0);
                 } else {
                     height = rollJumpHeight;
+                    cC.height = pC.colliderHeight;
+                    cC.center = new Vector3(0, pC.colliderCenter, 0);
                 }
             }
 
