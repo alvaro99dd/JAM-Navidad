@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 public class CameraManager : MonoBehaviour {
     public GameObject cam;
     public GameObject aimCamera;
+    public Transform head;
 
     public bool isAiming = false;
 
@@ -14,6 +15,12 @@ public class CameraManager : MonoBehaviour {
     private void Awake() {
         if (!instance) {
             instance = this;
+        }
+    }
+
+    private void Update() {
+        if (!isAiming) {
+            aimCamera.transform.LookAt(head);
         }
     }
 

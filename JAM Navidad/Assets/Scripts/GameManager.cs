@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
         if (!instance) {
             instance = this;
         }
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     void OnPause() {

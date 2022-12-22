@@ -39,9 +39,9 @@ public class PlayerController : MonoBehaviour {
     }
 
     private void Update() {
-        //if (!CameraManager.instance.isAiming) {
+        if (!CameraManager.instance.isAiming) {
         MovePlayer();
-        //}
+        }
         anim.SetBool("Grounded", cC.isGrounded);
     }
 

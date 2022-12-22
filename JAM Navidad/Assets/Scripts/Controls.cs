@@ -264,6 +264,15 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Aim"",
+                    ""type"": ""Button"",
+                    ""id"": ""442e9f60-b59a-4486-9a01-09b88e0afd08"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -308,6 +317,17 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Travel"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""385a84f5-5902-4f4f-99db-43806b9f1e4e"",
+                    ""path"": ""<Mouse>/rightButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Aim"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -365,6 +385,7 @@ public partial class @Controls : IInputActionCollection2, IDisposable
         m_Skills = asset.FindActionMap("Skills", throwIfNotFound: true);
         m_Skills_Throw = m_Skills.FindAction("Throw", throwIfNotFound: true);
         m_Skills_Travel = m_Skills.FindAction("Travel", throwIfNotFound: true);
+        m_Skills_Aim = m_Skills.FindAction("Aim", throwIfNotFound: true);
         // GameActions
         m_GameActions = asset.FindActionMap("GameActions", throwIfNotFound: true);
         m_GameActions_Pause = m_GameActions.FindAction("Pause", throwIfNotFound: true);
@@ -486,12 +507,14 @@ public partial class @Controls : IInputActionCollection2, IDisposable
     private ISkillsActions m_SkillsActionsCallbackInterface;
     private readonly InputAction m_Skills_Throw;
     private readonly InputAction m_Skills_Travel;
+    private readonly InputAction m_Skills_Aim;
     public struct SkillsActions
     {
         private @Controls m_Wrapper;
         public SkillsActions(@Controls wrapper) { m_Wrapper = wrapper; }
         public InputAction @Throw => m_Wrapper.m_Skills_Throw;
         public InputAction @Travel => m_Wrapper.m_Skills_Travel;
+        public InputAction @Aim => m_Wrapper.m_Skills_Aim;
         public InputActionMap Get() { return m_Wrapper.m_Skills; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -507,6 +530,9 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                 @Travel.started -= m_Wrapper.m_SkillsActionsCallbackInterface.OnTravel;
                 @Travel.performed -= m_Wrapper.m_SkillsActionsCallbackInterface.OnTravel;
                 @Travel.canceled -= m_Wrapper.m_SkillsActionsCallbackInterface.OnTravel;
+                @Aim.started -= m_Wrapper.m_SkillsActionsCallbackInterface.OnAim;
+                @Aim.performed -= m_Wrapper.m_SkillsActionsCallbackInterface.OnAim;
+                @Aim.canceled -= m_Wrapper.m_SkillsActionsCallbackInterface.OnAim;
             }
             m_Wrapper.m_SkillsActionsCallbackInterface = instance;
             if (instance != null)
@@ -517,6 +543,9 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                 @Travel.started += instance.OnTravel;
                 @Travel.performed += instance.OnTravel;
                 @Travel.canceled += instance.OnTravel;
+                @Aim.started += instance.OnAim;
+                @Aim.performed += instance.OnAim;
+                @Aim.canceled += instance.OnAim;
             }
         }
     }
@@ -565,6 +594,7 @@ public partial class @Controls : IInputActionCollection2, IDisposable
     {
         void OnThrow(InputAction.CallbackContext context);
         void OnTravel(InputAction.CallbackContext context);
+        void OnAim(InputAction.CallbackContext context);
     }
     public interface IGameActionsActions
     {
