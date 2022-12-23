@@ -37,9 +37,9 @@ public class GameManager : MonoBehaviour {
             return;
         }
 
-        cinemachineFreeL.enabled = false;
-        playerInput.enabled = false;
         gamePaused = !gamePaused;
+        cinemachineFreeL.enabled = !gamePaused;
+        playerInput.enabled = !gamePaused;
         pauseMenu.SetActive(gamePaused);
         Cursor.lockState = gamePaused ? CursorLockMode.Confined : CursorLockMode.Locked;
         Time.timeScale = gamePaused ? 0 : 1;
