@@ -5,8 +5,7 @@ using UnityEngine.UI;
 using Cinemachine;
 using UnityEngine.InputSystem;
 
-public class GameManager : MonoBehaviour
-{
+public class GameManager : MonoBehaviour {
     bool gamePaused, UIshown;
     public GameObject pauseMenu, UI;
     public CinemachineFreeLook cinemachineFreeL;
@@ -34,6 +33,9 @@ public class GameManager : MonoBehaviour
     }
 
     void OnPause() {
+        if (GuideManager.instance.isGuideShowing) {
+            return;
+        }
 
         cinemachineFreeL.enabled = false;
         playerInput.enabled = false;

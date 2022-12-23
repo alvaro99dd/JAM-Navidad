@@ -69,7 +69,7 @@ public class CollectableManager : MonoBehaviour {
             case RuneType.fire:
                 staffJump = ++currentFireRunes >= maxFireRunes;
 
-                if (staffTravel) {
+                if (staffJump) {
                     GuideManager.instance.ShowMessage("fire");
                 }
 

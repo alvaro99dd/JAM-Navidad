@@ -23,6 +23,9 @@ public class PlayerController : MonoBehaviour {
     public bool rolling;
     public float colliderHeight;
     public float colliderCenter;
+    [Header("Particles")]
+    public GameObject walkParticles;
+
 
     public float rollTime;
     public IEnumerator rollCoroutine;
@@ -39,9 +42,9 @@ public class PlayerController : MonoBehaviour {
     }
 
     private void Update() {
-        if (!CameraManager.instance.isAiming) {
+
         MovePlayer();
-        }
+
         anim.SetBool("Grounded", cC.isGrounded);
     }
 
@@ -52,6 +55,14 @@ public class PlayerController : MonoBehaviour {
         Vector3 direction = c.Movement.Move.ReadValue<Vector3>();
 
         if (direction.magnitude >= 0.1f) {
+            if (cC.isGrounded) {
+                walkParticles.SetActive(true);
+
+            }
+            else {
+                walkParticles.SetActive(false);
+
+            }
             float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
             float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
             transform.rotation = Quaternion.Euler(0f, angle, 0f);
@@ -64,6 +75,10 @@ public class PlayerController : MonoBehaviour {
 
             cC.Move(moveDir * speed * Time.deltaTime);
         }
+        else {
+            walkParticles.SetActive(false);
+
+        }
         anim.SetFloat("Vspeed", direction.magnitude);
     }
 
@@ -72,7 +87,8 @@ public class PlayerController : MonoBehaviour {
         anim.ResetTrigger("StopRoll");
         if (!cC.isGrounded) {
             airRolling = true;
-        } else {
+        }
+        else {
             cC.height = colliderHeight;
             cC.center = new Vector3(0, colliderCenter, 0);
         }
@@ -84,7 +100,8 @@ public class PlayerController : MonoBehaviour {
         do {
             if (cC.isGrounded) {
                 dir.y = -4.5f;
-            } else {
+            }
+            else {
                 dir.y = 0f;
             }
             cC.Move(dir * rollSpeed * Time.deltaTime);

@@ -40,6 +40,8 @@ public class GuideManager : MonoBehaviour {
     }
 
     public void HideMessage(InputAction.CallbackContext context) {
+       
+
         if (fireRuneWindow.activeInHierarchy) {
             fireRuneWindow.SetActive(false);
 
