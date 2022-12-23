@@ -58,4 +58,8 @@ public class GameManager : MonoBehaviour
         //yield return new WaitForSeconds(0.5f);
         UIshown = false;
     }
+
+    public void Exit() {
+        Application.Quit();
+    }
 }
