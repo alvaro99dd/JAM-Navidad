@@ -42,8 +42,7 @@ public class CollectableManager : MonoBehaviour {
             case Collectables.babySloth:
                 SlothBehaviour();
                 break;
-            default:
-                break;
+
         }
     }
 
@@ -51,17 +50,30 @@ public class CollectableManager : MonoBehaviour {
         switch (runeType) {
             case RuneType.earth:
                 staffThrow = ++currentEarthRunes >= maxEarthRunes;
+
+                if (staffThrow) {
+                    GuideManager.instance.ShowMessage("earth");
+                }
+
                 GameManager.instance.earthRunes.text = $"{currentEarthRunes} / {maxEarthRunes}";
                 break;
             case RuneType.water:
                 staffTravel = ++currentWaterRunes >= maxWaterRunes;
+
+                if (staffTravel) {
+                    GuideManager.instance.ShowMessage("water");
+                }
+
                 GameManager.instance.waterRunes.text = $"{currentWaterRunes} / {maxWaterRunes}";
                 break;
             case RuneType.fire:
                 staffJump = ++currentFireRunes >= maxFireRunes;
+
+                if (staffTravel) {
+                    GuideManager.instance.ShowMessage("fire");
+                }
+
                 GameManager.instance.fireRunes.text = $"{currentFireRunes} / {maxFireRunes}";
-                break;
-            default:
                 break;
         }
 

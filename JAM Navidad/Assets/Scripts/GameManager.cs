@@ -2,11 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Cinemachine;
+using UnityEngine.InputSystem;
 
 public class GameManager : MonoBehaviour
 {
     bool gamePaused, UIshown;
     public GameObject pauseMenu, UI;
+    public CinemachineFreeLook cinemachineFreeL;
+    public PlayerInput playerInput;
     public Text waterRunes, earthRunes, fireRunes, slothText;
     public Text UIWaterRunes, UIEarthRunes, UIFireRunes, UISlothText;
     public float disappearTime;
@@ -30,6 +34,9 @@ public class GameManager : MonoBehaviour
     }
 
     void OnPause() {
+
+        cinemachineFreeL.enabled = false;
+        playerInput.enabled = false;
         gamePaused = !gamePaused;
         pauseMenu.SetActive(gamePaused);
         Cursor.lockState = gamePaused ? CursorLockMode.Confined : CursorLockMode.Locked;
