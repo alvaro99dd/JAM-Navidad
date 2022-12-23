@@ -179,7 +179,7 @@ ModelImporter:
       name: Armature|Jump
       takeName: Armature|Jump
       internalID: 0
-      firstFrame: 0
+      firstFrame: 35
       lastFrame: 78
       wrapMode: 0
       orientationOffsetY: 0
@@ -208,15 +208,15 @@ ModelImporter:
       name: Armature|Roll
       takeName: Armature|Roll
       internalID: 0
-      firstFrame: 0
-      lastFrame: 101
+      firstFrame: 46
+      lastFrame: 61
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0

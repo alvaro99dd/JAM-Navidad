@@ -8,6 +8,8 @@ public class StaffBehaviour : MonoBehaviour {
     Transform parent;
     Collider objectCollider;
     TravelToStaff travelScript;
+    public GameObject thrownStaffMesh;
+    public GameObject realStaffMesh;
     public Animator playerAnim;
     //AnimationCurve yCurve;
     public Transform staffLimit;
@@ -56,6 +58,8 @@ public class StaffBehaviour : MonoBehaviour {
     }
 
     void OnThrow() {
+        playerAnim.ResetTrigger("Throw");
+        playerAnim.ResetTrigger("Catch");
         if (!CollectableManager.instance.staffThrow) {
             return;
         }
@@ -81,6 +85,8 @@ public class StaffBehaviour : MonoBehaviour {
     }
 
     IEnumerator LerpPosition() {
+        thrownStaffMesh.SetActive(true);
+        realStaffMesh.SetActive(false);
         playerAnim.SetTrigger("Throw");
         tempPosition = staffLimit.position;
         tempTag = staffLimit.tag;
@@ -111,6 +117,8 @@ public class StaffBehaviour : MonoBehaviour {
             rB.position = Vector3.MoveTowards(transform.position, tempPosition, time * Time.deltaTime);
             yield return new WaitForEndOfFrame();
         }
+        thrownStaffMesh.SetActive(false);
+        realStaffMesh.SetActive(true);
         rB.velocity = Vector3.zero;
         transform.SetParent(parent);
         comingBack = false;

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public enum RuneType {
-    earth, water, fire
+    earth, water, fire, none
 }
 
 public class CollectableBehaviour : MonoBehaviour {

@@ -54,7 +54,9 @@ public class TravelToStaff : MonoBehaviour
     void HangOnStaff() {
         playercC.enabled = false;
         pJ.enabled = true;
+        pJ.airJump = false;
         pC.enabled = true;
+        pC.anim.SetTrigger("Grab");
         hanged = true;
     }
 

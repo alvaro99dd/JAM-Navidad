@@ -46,10 +46,11 @@ public class PlayerJump : MonoBehaviour {
         if (jumpPressed && (groundedPlayer || airJump)) {
             if (!pC.rolling) {
                 if (CollectableManager.instance.staffJump && transform.Find("StaffHolder").childCount > 0 && !airJump) {
+                    pC.anim.SetTrigger("Staff");
                     height = staffJumpHeight;
                 } else {
+                    pC.anim.SetTrigger("Jump");
                     if (toStaff.hanged) {
-                        toStaff.hanged = false;
                         height = hangedHeight;
                     } else {
                         height = jumpHeight;
@@ -57,14 +58,14 @@ public class PlayerJump : MonoBehaviour {
                 }
             } else {
                 if (CollectableManager.instance.staffJump && transform.Find("StaffHolder").childCount > 0 && !airJump) {
+                    pC.anim.SetTrigger("Staff");
                     height = staffRollHeight;
-                    cC.height = pC.colliderHeight;
-                    cC.center = new Vector3(0, pC.colliderCenter, 0);
                 } else {
+                    pC.anim.SetTrigger("Jump");
                     height = rollJumpHeight;
-                    cC.height = pC.colliderHeight;
-                    cC.center = new Vector3(0, pC.colliderCenter, 0);
                 }
+                cC.height = pC.colliderHeight;
+                cC.center = new Vector3(0, pC.colliderCenter, 0);
             }
 
             playerVelocity.y = 0f;
@@ -76,9 +77,12 @@ public class PlayerJump : MonoBehaviour {
     }
 
     void OnJump() {
+        pC.anim.ResetTrigger("Jump");
+        pC.anim.ResetTrigger("Staff");
         Debug.Log("Jump pressed");
 
         if (toStaff.hanged) {
+            toStaff.hanged = false;
             toStaff.StopHanging();
         }
 
