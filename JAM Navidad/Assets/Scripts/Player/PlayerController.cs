@@ -114,6 +114,10 @@ public class PlayerController : MonoBehaviour {
     }
 
     void OnRoll() {
+        if (cC.isGrounded) {
+            airRolling = false;
+        }
+
         if (airRolling || toStaff.travelStaff != null) {
             return;
         }
