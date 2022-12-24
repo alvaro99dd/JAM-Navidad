@@ -105,6 +105,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 139234367525536778, guid: cece952e112937d479ad1f1dd16b205d, type: 3}
+      propertyPath: LightsModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 139234367525536778, guid: cece952e112937d479ad1f1dd16b205d, type: 3}
       propertyPath: ShapeModule.radius.value
       value: 0.7
       objectReference: {fileID: 0}
@@ -114,11 +118,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2249532917570978780, guid: cece952e112937d479ad1f1dd16b205d, type: 3}
       propertyPath: m_Range
-      value: 4.1
+      value: 3.5
       objectReference: {fileID: 0}
     - target: {fileID: 2249532917570978780, guid: cece952e112937d479ad1f1dd16b205d, type: 3}
       propertyPath: m_Intensity
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2249532917570978780, guid: cece952e112937d479ad1f1dd16b205d, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2249532917570978780, guid: cece952e112937d479ad1f1dd16b205d, type: 3}
+      propertyPath: m_BounceIntensity
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2249532917570978780, guid: cece952e112937d479ad1f1dd16b205d, type: 3}
       propertyPath: m_BoundingSphereOverride.w
@@ -139,6 +151,10 @@ PrefabInstance:
     - target: {fileID: 2625369375127884192, guid: cece952e112937d479ad1f1dd16b205d, type: 3}
       propertyPath: m_Name
       value: FireRuneParticles
+      objectReference: {fileID: 0}
+    - target: {fileID: 5011385597121525273, guid: cece952e112937d479ad1f1dd16b205d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6499662815044632659, guid: cece952e112937d479ad1f1dd16b205d, type: 3}
       propertyPath: m_RootOrder
@@ -182,6 +198,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6499662815044632659, guid: cece952e112937d479ad1f1dd16b205d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6830785836837434097, guid: cece952e112937d479ad1f1dd16b205d, type: 3}
+      propertyPath: m_AdditionalLightsShadowResolutionTier
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

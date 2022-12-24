@@ -60,7 +60,7 @@ public class CollectableManager : MonoBehaviour {
                     pJ.GetComponent<AudioSource>().PlayOneShot(AudioLibrary.instance.collectRune);
                 }
 
-                GameManager.instance.earthRunes.text = $"{currentEarthRunes} / {maxEarthRunes}";
+                GameManager.instance.earthRunes = $"{currentEarthRunes} / {maxEarthRunes}";
                 PlayerPrefs.SetInt("EarthRunes", currentEarthRunes);
                 break;
             case RuneType.water:
@@ -74,7 +74,7 @@ public class CollectableManager : MonoBehaviour {
                     pJ.GetComponent<AudioSource>().PlayOneShot(AudioLibrary.instance.collectRune);
                 }
 
-                GameManager.instance.waterRunes.text = $"{currentWaterRunes} / {maxWaterRunes}";
+                GameManager.instance.waterRunes = $"{currentWaterRunes} / {maxWaterRunes}";
                 PlayerPrefs.SetInt("WaterRunes", currentWaterRunes);
                 break;
             case RuneType.fire:
@@ -88,7 +88,7 @@ public class CollectableManager : MonoBehaviour {
                     pJ.GetComponent<AudioSource>().PlayOneShot(AudioLibrary.instance.collectRune);
                 }
 
-                GameManager.instance.fireRunes.text = $"{currentFireRunes} / {maxFireRunes}";
+                GameManager.instance.fireRunes = $"{currentFireRunes} / {maxFireRunes}";
                 PlayerPrefs.SetInt("FireRunes", currentFireRunes);
                 break;
         }
@@ -97,33 +97,37 @@ public class CollectableManager : MonoBehaviour {
     }
 
     void SlothBehaviour() {
-        GameManager.instance.slothText.text = $"{++currentSloths} / {maxSloths}";
+        GameManager.instance.slothText
+            = $"{++currentSloths} / {maxSloths}";
         PlayerPrefs.SetInt("BabySloths", currentSloths);
     }
 
     void LoadData() {
         if (PlayerPrefs.HasKey("EarthRunes")) {
-            GameManager.instance.earthRunes.text = $"{PlayerPrefs.GetInt("EarthRunes")} / {maxEarthRunes}";
+            GameManager.instance.earthRunes = $"{PlayerPrefs.GetInt("EarthRunes")} / {maxEarthRunes}";
+            currentEarthRunes = PlayerPrefs.GetInt("EarthRunes");
         } else {
-            GameManager.instance.earthRunes.text = $"{currentEarthRunes} / {maxEarthRunes}";
+            GameManager.instance.earthRunes = $"{currentEarthRunes} / {maxEarthRunes}";
         }
 
         if (PlayerPrefs.HasKey("WaterRunes")) {
-            GameManager.instance.waterRunes.text = $"{PlayerPrefs.GetInt("WaterRunes")} / {maxWaterRunes}";
+            GameManager.instance.waterRunes = $"{PlayerPrefs.GetInt("WaterRunes")} / {maxWaterRunes}";
+            currentWaterRunes = PlayerPrefs.GetInt("WaterRunes");
         } else {
-            GameManager.instance.waterRunes.text = $"{currentWaterRunes} / {maxWaterRunes}";
+            GameManager.instance.waterRunes = $"{currentWaterRunes} / {maxWaterRunes}";
         }
 
         if (PlayerPrefs.HasKey("FireRunes")) {
-            GameManager.instance.fireRunes.text = $"{PlayerPrefs.GetInt("FireRunes")} / {maxFireRunes}";
+            GameManager.instance.fireRunes = $"{PlayerPrefs.GetInt("FireRunes")} / {maxFireRunes}";
+            currentFireRunes = PlayerPrefs.GetInt("FireRunes");
         } else {
-            GameManager.instance.fireRunes.text = $"{currentFireRunes} / {maxFireRunes}";
+            GameManager.instance.fireRunes = $"{currentFireRunes} / {maxFireRunes}";
         }
 
         if (PlayerPrefs.HasKey("BabySloths")) {
-            GameManager.instance.slothText.text = $"{PlayerPrefs.GetInt("BabySloths")} / {maxSloths}";
+            GameManager.instance.slothText = $"{PlayerPrefs.GetInt("BabySloths")} / {maxSloths}";
         } else {
-            GameManager.instance.slothText.text = $"{currentSloths} / {maxSloths}";
+            GameManager.instance.slothText = $"{currentSloths} / {maxSloths}";
         }
 
         if (PlayerPrefs.HasKey("Throw")) {

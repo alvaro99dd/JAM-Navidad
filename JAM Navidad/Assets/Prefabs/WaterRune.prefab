@@ -73,6 +73,18 @@ PrefabInstance:
       value: 0.62
       objectReference: {fileID: 0}
     - target: {fileID: 1172544904423342999, guid: 0b772bf99e4c6b047878156ffdb1bbf0, type: 3}
+      propertyPath: m_Range
+      value: 6.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1172544904423342999, guid: 0b772bf99e4c6b047878156ffdb1bbf0, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1172544904423342999, guid: 0b772bf99e4c6b047878156ffdb1bbf0, type: 3}
+      propertyPath: m_BounceIntensity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1172544904423342999, guid: 0b772bf99e4c6b047878156ffdb1bbf0, type: 3}
       propertyPath: m_BoundingSphereOverride.w
       value: 0
       objectReference: {fileID: 0}
@@ -87,6 +99,14 @@ PrefabInstance:
     - target: {fileID: 3106756607634772459, guid: 0b772bf99e4c6b047878156ffdb1bbf0, type: 3}
       propertyPath: m_Name
       value: WaterRuneParticles
+      objectReference: {fileID: 0}
+    - target: {fileID: 5403828638047745618, guid: 0b772bf99e4c6b047878156ffdb1bbf0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5888903613990974138, guid: 0b772bf99e4c6b047878156ffdb1bbf0, type: 3}
+      propertyPath: m_AdditionalLightsShadowResolutionTier
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6143250470082822168, guid: 0b772bf99e4c6b047878156ffdb1bbf0, type: 3}
       propertyPath: m_RootOrder

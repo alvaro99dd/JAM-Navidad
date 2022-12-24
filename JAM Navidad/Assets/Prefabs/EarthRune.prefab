@@ -68,6 +68,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6894550340941075141}
     m_Modifications:
+    - target: {fileID: 2544660782032180011, guid: 32ec395b44c14ae40b7bbe4cd24a64a0, type: 3}
+      propertyPath: m_AdditionalLightsShadowResolutionTier
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2857762782464352649, guid: 32ec395b44c14ae40b7bbe4cd24a64a0, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -112,6 +116,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4041879918038767555, guid: 32ec395b44c14ae40b7bbe4cd24a64a0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5667184536053033101, guid: 32ec395b44c14ae40b7bbe4cd24a64a0, type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.5
@@ -119,6 +127,18 @@ PrefabInstance:
     - target: {fileID: 6481963482395471994, guid: 32ec395b44c14ae40b7bbe4cd24a64a0, type: 3}
       propertyPath: m_Name
       value: EarthRuneParticles
+      objectReference: {fileID: 0}
+    - target: {fileID: 7110148886933430790, guid: 32ec395b44c14ae40b7bbe4cd24a64a0, type: 3}
+      propertyPath: m_Range
+      value: 6.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7110148886933430790, guid: 32ec395b44c14ae40b7bbe4cd24a64a0, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7110148886933430790, guid: 32ec395b44c14ae40b7bbe4cd24a64a0, type: 3}
+      propertyPath: m_BounceIntensity
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7110148886933430790, guid: 32ec395b44c14ae40b7bbe4cd24a64a0, type: 3}
       propertyPath: m_BoundingSphereOverride.w

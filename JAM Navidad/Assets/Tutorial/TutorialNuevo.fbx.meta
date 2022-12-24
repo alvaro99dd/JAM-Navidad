@@ -1,0 +1,800 @@
+fileFormatVersion: 2
+guid: 191588e9e3fba674f978a527b257fbf4
+ModelImporter:
+  serializedVersion: 21202
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: (EstaPrimeroMejor)RocaGrandeFina
+    second: {fileID: 2100000, guid: 284d1e9f7efb1d343abf54c88c11685b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 11x5.5x10
+    second: {fileID: 2100000, guid: 6751b4f3c43c6bd4a9a397b63d985b10, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 4x4x1
+    second: {fileID: 2100000, guid: 757d8b60da12cf44e9d40a2e801d95cc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Arco
+    second: {fileID: 2100000, guid: 2b3b14c775cfd6e41bab404a634860d5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Columna 4x4x10.001
+    second: {fileID: 2100000, guid: 9cfb6821e12bb2d4b86409346feef98f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Escalera1
+    second: {fileID: 2100000, guid: 8d850c54023c7814ab808315ab92f0e2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: EscaleraGrande
+    second: {fileID: 2100000, guid: 5bc17c9890fcc704bac3670b8454b02f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.002
+    second: {fileID: 2100000, guid: 04e290fccbc0f5b418a552c8e1a0b50f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.003
+    second: {fileID: 2100000, guid: 48ca74bf036560142ad910a67c722b7b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.006
+    second: {fileID: 2100000, guid: bca7518f28a9b8c4eaa23be30dcf34e5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.007
+    second: {fileID: 2100000, guid: 9737ef4496b6d5246a9e3e37fd478975, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.008
+    second: {fileID: 2100000, guid: bad4f1aeb61779e48ba197c18ca8b9cf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.009
+    second: {fileID: 2100000, guid: 676fed2d41605ae4bb856b0213bb05b3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.010
+    second: {fileID: 2100000, guid: 083a7285b343649498784a41669de4de, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.011
+    second: {fileID: 2100000, guid: 23f2de3fa40525e4990f9a708d4dbc54, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.012
+    second: {fileID: 2100000, guid: f02ac7cbf2b67dc448076e324129e551, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.013
+    second: {fileID: 2100000, guid: 64d2cfc60f7504c41b7e14903fca3330, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.014
+    second: {fileID: 2100000, guid: 2634d950afaab0647862d25265d00910, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.015
+    second: {fileID: 2100000, guid: ea54758b960d96f49b7520f148e79ca6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.016
+    second: {fileID: 2100000, guid: 9d1211d5586d1d44f9dc09c4f05ef53b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Muro 1 tuto
+    second: {fileID: 2100000, guid: b9ec325975533874885c412201b4d0bd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Muro tuto 2
+    second: {fileID: 2100000, guid: de0eafcf610fed142ab6cb6d646c2343, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Muro tuto 3
+    second: {fileID: 2100000, guid: d6f87a3f1869e2f4689c597523593b46, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pared tuto
+    second: {fileID: 2100000, guid: 0e7d3ca73e94fbb43b7f767306803f97, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Roca11x5.5x10
+    second: {fileID: 2100000, guid: de89cfc46286e98458ec36f1e63eebd1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Roca11x5.5x10.001
+    second: {fileID: 2100000, guid: 8fac6296dc70ec04ca06f31dccd2106e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Runa Agua
+    second: {fileID: 2100000, guid: d0612c4868c537a47a87a2bebaff9c3d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RunaFuego
+    second: {fileID: 2100000, guid: c7c13f1007ffb9544af6f1a3615457a9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RunaTierra
+    second: {fileID: 2100000, guid: 543e14d57d3d74d4489021ce66f287cb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Suelo tuto
+    second: {fileID: 2100000, guid: e15b2a333f6b8444595592991384902c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tablon madera tuto
+    second: {fileID: 2100000, guid: 91928b51da6d45f4196524edb9697f93, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tmplio
+    second: {fileID: 2100000, guid: 5dc0d77d788502147b6de66359b22661, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Altar_DefaultMaterial_AlbedoTransparency
+    second: {fileID: 2800000, guid: 0efc006c98b479c439f8b69e10e2d67d, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Altar_DefaultMaterial_Emission
+    second: {fileID: 2800000, guid: 97df8beb9a9a3724091bef2ccfe4196f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Altar_DefaultMaterial_MetallicSmoothness
+    second: {fileID: 2800000, guid: 7963278c28f1a344cb05d3f25b2aad74, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Altar_DefaultMaterial_Normal
+    second: {fileID: 2800000, guid: d2b41eb42485139499b01a4e4cc59e17, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Arco Completo_DefaultMaterial_AlbedoTransparency
+    second: {fileID: 2800000, guid: eb89ff257ad1bfa4aa73ffe5ed8a3aa5, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Arco Completo_DefaultMaterial_MetallicSmoothness
+    second: {fileID: 2800000, guid: c311c4a4512e710418de9c6d12a306f1, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Arco Completo_DefaultMaterial_Normal
+    second: {fileID: 2800000, guid: 116417a264d6ba1479d872faa57b4df6, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Arma1_DefaultMaterial_AlbedoTransparency
+    second: {fileID: 2800000, guid: 443f2e1b689fab5428a66a091eb0d776, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Arma1_DefaultMaterial_Emission
+    second: {fileID: 2800000, guid: 20b1b1357dde2944a8c4c4a074f295fc, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Arma1_DefaultMaterial_MetallicSmoothness
+    second: {fileID: 2800000, guid: 7c40147c315f9644da76856b4f18fb03, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Arma1_DefaultMaterial_Normal
+    second: {fileID: 2800000, guid: 986a054f00a92e5468c19d30076b849c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Arma2_DefaultMaterial_AlbedoTransparency
+    second: {fileID: 2800000, guid: a83ba6fcb23fbbe42b4bdb9b87a96621, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Arma2_DefaultMaterial_Emission
+    second: {fileID: 2800000, guid: 9e9d51ba23970ab4480d8fc7cd74315f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Arma2_DefaultMaterial_MetallicSmoothness
+    second: {fileID: 2800000, guid: f2b58d68b59fb584492f4e61d65ec40e, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Arma2_DefaultMaterial_Normal
+    second: {fileID: 2800000, guid: 1acda351d95380d4b8a2848fb2d7c977, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Arma3_DefaultMaterial_AlbedoTransparency
+    second: {fileID: 2800000, guid: 213158b7c96497a43bb8395920bb8dc4, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Arma3_DefaultMaterial_Emission
+    second: {fileID: 2800000, guid: f265ef39130204043b47dc936a8cb47e, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Arma3_DefaultMaterial_MetallicSmoothness
+    second: {fileID: 2800000, guid: bff50de3a889e324a9c0333ce6943e59, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Arma3_DefaultMaterial_Normal
+    second: {fileID: 2800000, guid: 85e4a1a254c7d8241a150c2f9e0d672d, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Arma4_DefaultMaterial_AlbedoTransparency
+    second: {fileID: 2800000, guid: 2e467f398e2a171418217bbea027fd92, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Arma4_DefaultMaterial_Emission
+    second: {fileID: 2800000, guid: dbb1b5c84116ec646843662baafeb72e, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Arma4_DefaultMaterial_MetallicSmoothness
+    second: {fileID: 2800000, guid: 5d9e7ec27c04545498a1fb128aaa6c7a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Arma4_DefaultMaterial_Normal
+    second: {fileID: 2800000, guid: cc09593ccca53ff4aa90d80bd692eb03, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Arma5_DefaultMaterial_AlbedoTransparency
+    second: {fileID: 2800000, guid: 42ca353dc0cb0784fbcccd5e25df00e4, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Arma5_DefaultMaterial_Emission
+    second: {fileID: 2800000, guid: 9e72053bca7f83f4190c4bf78409616e, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Arma5_DefaultMaterial_MetallicSmoothness
+    second: {fileID: 2800000, guid: 888ed0ed85c113e409a6e9fa1da2a9dd, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Arma5_DefaultMaterial_Normal
+    second: {fileID: 2800000, guid: b1ee80cce10b74e44af83a9c4139966b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Arma6_DefaultMaterial_AlbedoTransparency
+    second: {fileID: 2800000, guid: 0ccb00844702164469b170aff23e5ac9, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Arma6_DefaultMaterial_Emission
+    second: {fileID: 2800000, guid: 3b5e0d611e5ab4d4ab142d3704b8a3fc, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Arma6_DefaultMaterial_MetallicSmoothness
+    second: {fileID: 2800000, guid: 74994c13574608d49a4534a737c9f1cb, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Arma6_DefaultMaterial_Normal
+    second: {fileID: 2800000, guid: 90fa5df8d70e6a14f8960f09b4ee669d, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Columna4410_DefaultMaterial_AlbedoTransparency
+    second: {fileID: 2800000, guid: e8962c0c30852844f920cbde6e6e2332, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Columna4410_DefaultMaterial_MetallicSmoothness
+    second: {fileID: 2800000, guid: 5908c3a6fe31eb042acc541c88a876a8, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Columna4410_DefaultMaterial_Normal
+    second: {fileID: 2800000, guid: 23895aba93b50554184c5ccdfd85390f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Escalera Grande_DefaultMaterial_AlbedoTransparency
+    second: {fileID: 2800000, guid: 36b9eb044f276104f9b85b02ddbdcddc, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Escalera Grande_DefaultMaterial_Emission
+    second: {fileID: 2800000, guid: 0096c1bc61580114cb51c83296ec104c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Escalera Grande_DefaultMaterial_MetallicSmoothness
+    second: {fileID: 2800000, guid: 1770e555ae4e3154583adc74c8318c28, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Escalera Grande_DefaultMaterial_Normal
+    second: {fileID: 2800000, guid: fa1855e4fb328374b99c2c95793ebcb9, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Escalera Grande_DefaultMaterial_SpecularSmoothness
+    second: {fileID: 2800000, guid: d7fb983c822655a4196815ec16c9b614, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: "Escalera Peque\xF1a1_DefaultMaterial_AlbedoTransparency"
+    second: {fileID: 2800000, guid: 3a738ddeda5da494c81360e05c76df53, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: "Escalera Peque\xF1a1_DefaultMaterial_Emission"
+    second: {fileID: 2800000, guid: 98bee56f54414204e9baabfd2f4e65a9, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: "Escalera Peque\xF1a1_DefaultMaterial_MetallicSmoothness"
+    second: {fileID: 2800000, guid: f6cec8cf831f91b4894fe71eb35dda86, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: "Escalera Peque\xF1a1_DefaultMaterial_Normal"
+    second: {fileID: 2800000, guid: d01085acc1f15c44b96f35cc936d97ae, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: "Escalera Peque\xF1a1_DefaultMaterial_SpecularSmoothness"
+    second: {fileID: 2800000, guid: ce0f94ab8b230464bb4ea6969715ad5c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: FaroEstilizado_DefaultMaterial_AlbedoTransparency
+    second: {fileID: 2800000, guid: de3a83b544203cb4cb9aa51933486511, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: FaroEstilizado_DefaultMaterial_Emission
+    second: {fileID: 2800000, guid: 2d550882b74d38a4480275d233fa0fd6, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: FaroEstilizado_DefaultMaterial_MetallicSmoothness
+    second: {fileID: 2800000, guid: 507ccb01baae41943bb281ddfe140945, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: FaroEstilizado_DefaultMaterial_Normal
+    second: {fileID: 2800000, guid: 7621383f298ba80489fdd694386d052a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Farol Grande_DefaultMaterial_AlbedoTransparency
+    second: {fileID: 2800000, guid: 69cc332bcf1764047a6d3e849c9b3413, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Farol Grande_DefaultMaterial_Emission
+    second: {fileID: 2800000, guid: e020d415a75b5d8418d92bd0b0bf7356, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Farol Grande_DefaultMaterial_MetallicSmoothness
+    second: {fileID: 2800000, guid: 703f6806e3a88e24d8b6396ede03134e, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Farol Grande_DefaultMaterial_Normal
+    second: {fileID: 2800000, guid: a5553402e3f98404788aaa735a801d39, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: "Farol Peque\xF1o_DefaultMaterial_AlbedoTransparency"
+    second: {fileID: 2800000, guid: f4cf89e85a5dc274a9e8681cc2ab7347, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: "Farol Peque\xF1o_DefaultMaterial_Emission"
+    second: {fileID: 2800000, guid: 26aeaddea2d6c3d49a0247bc671de570, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: "Farol Peque\xF1o_DefaultMaterial_MetallicSmoothness"
+    second: {fileID: 2800000, guid: 67dc52b548182a348a2f77c25fe28e46, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: "Farol Peque\xF1o_DefaultMaterial_Normal"
+    second: {fileID: 2800000, guid: 23dd69df4b69bef45a8df09fff514f94, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: FundaKatana_DefaultMaterial_AlbedoTransparency
+    second: {fileID: 2800000, guid: b7c87044fc93b9447806c2de535e2232, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: FundaKatana_DefaultMaterial_Emission
+    second: {fileID: 2800000, guid: 56e697ccd54284045848f905a54e218e, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: FundaKatana_DefaultMaterial_MetallicSmoothness
+    second: {fileID: 2800000, guid: 8cd7d0cc8a2083c4e8bfb1e8df31c770, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: FundaKatana_DefaultMaterial_Normal
+    second: {fileID: 2800000, guid: a788870384bc5804abb84b4ce1f93bbb, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Katana_DefaultMaterial_AlbedoTransparency
+    second: {fileID: 2800000, guid: af897de22ee4e2343b2bfdef92062fbc, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Katana_DefaultMaterial_Emission
+    second: {fileID: 2800000, guid: d905bc5d76a43024d942c7310d68b7f0, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Katana_DefaultMaterial_MetallicSmoothness
+    second: {fileID: 2800000, guid: 222c18d4e60d42b438806ae4d840094c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Katana_DefaultMaterial_Normal
+    second: {fileID: 2800000, guid: 9a7d1bd41e3926f4e92ad4ba82541af7, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Muro Tutorial 1_DefaultMaterial_AlbedoTransparency
+    second: {fileID: 2800000, guid: 14e9fcdbc4271f94fa77680c7322addd, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Muro Tutorial 1_DefaultMaterial_MetallicSmoothness
+    second: {fileID: 2800000, guid: a50b0bd46f294c24ba78e702f33ac9a5, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Muro Tutorial 1_DefaultMaterial_Normal
+    second: {fileID: 2800000, guid: 797fe2049e9c20748958acdc44b4596b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Muro Tutorial 2_DefaultMaterial_AlbedoTransparency
+    second: {fileID: 2800000, guid: 4d1ac7e7007ae924c8f2784ca39b5bbf, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Muro Tutorial 2_DefaultMaterial_MetallicSmoothness
+    second: {fileID: 2800000, guid: 98f726b689069d34a9996f8ea06ee14d, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Muro Tutorial 2_DefaultMaterial_Normal
+    second: {fileID: 2800000, guid: 268a0756186714442aaccc67b68ed3c9, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Muro Tutorial 3_DefaultMaterial_AlbedoTransparency
+    second: {fileID: 2800000, guid: b5c0c8844dbb29f498d8cf8c9fbce9d0, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Muro Tutorial 3_DefaultMaterial_MetallicSmoothness
+    second: {fileID: 2800000, guid: 488f9e31a9bcebe4085f8211b48a5324, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Muro Tutorial 3_DefaultMaterial_Normal
+    second: {fileID: 2800000, guid: c63fbc796de314d4f9f9bb92ed513c67, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Pared Tutorial_DefaultMaterial_AlbedoTransparency
+    second: {fileID: 2800000, guid: 7ff8b82eee06ac04f90ceadaec73c713, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Pared Tutorial_DefaultMaterial_MetallicSmoothness
+    second: {fileID: 2800000, guid: d67e3e693aa191343b8d6991b39dc706, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Pared Tutorial_DefaultMaterial_Normal
+    second: {fileID: 2800000, guid: c21939cd5cccf2949b61ad9d318de902, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Roca11x5.5x10_DefaultMaterial_AlbedoTransparency
+    second: {fileID: 2800000, guid: 80048a7ce7e678c43bbfe407ecbfddd0, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Roca11x5.5x10_DefaultMaterial_MetallicSmoothness
+    second: {fileID: 2800000, guid: 10a55620ac1da3f44adb734a01116edb, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Roca11x5.5x10_DefaultMaterial_Normal
+    second: {fileID: 2800000, guid: 97667d4c4f6b9984298688d5b8a30a89, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Roca4x4x1_DefaultMaterial_AlbedoTransparency
+    second: {fileID: 2800000, guid: b8c8922b28ef8f34bb2567f4502ba4c5, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Roca4x4x1_DefaultMaterial_MetallicSmoothness
+    second: {fileID: 2800000, guid: 4f0d54856bb76784889c3b82d30351fd, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Roca4x4x1_DefaultMaterial_Normal
+    second: {fileID: 2800000, guid: 5b1f21c6b23e5ae44892de41b8f0fd01, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: RocaRectangularGrandeFina_DefaultMaterial_AlbedoTransparency
+    second: {fileID: 2800000, guid: 70637a5eb3b6f1b4488390f1500a0a8e, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: RocaRectangularGrandeFina_DefaultMaterial_MetallicSmoothness
+    second: {fileID: 2800000, guid: 58ad6b84fd8c0974fa18a8b1309531bc, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: RocaRectangularGrandeFina_DefaultMaterial_Normal
+    second: {fileID: 2800000, guid: 211427af6eeb09349bd11676da7a719e, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: RunaAgua_DefaultMaterial_AlbedoTransparency
+    second: {fileID: 2800000, guid: a4b5e982bd4d5764b9dbc7148ea13e67, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: RunaAgua_DefaultMaterial_Emission
+    second: {fileID: 2800000, guid: 3b36ef2de33c9b64eb4824e348d6c160, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: RunaAgua_DefaultMaterial_MetallicSmoothness
+    second: {fileID: 2800000, guid: 84f12a5b83918e2409e974fe2d030359, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: RunaAgua_DefaultMaterial_Normal
+    second: {fileID: 2800000, guid: 9bf0908871f38114fa547caec464f48f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: RunaFuego_DefaultMaterial_AlbedoTransparency
+    second: {fileID: 2800000, guid: 61d9407678ff5964dabdca642d94e9f6, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: RunaFuego_DefaultMaterial_Emission
+    second: {fileID: 2800000, guid: 219a6bed552fd154199a16cf63343f17, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: RunaFuego_DefaultMaterial_MetallicSmoothness
+    second: {fileID: 2800000, guid: d69dd989211aa1947af91a9d608a8b1b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: RunaFuego_DefaultMaterial_Normal
+    second: {fileID: 2800000, guid: 88dc512d49982bf4ba31d82aa4b86a2d, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: RunaTierra_DefaultMaterial_AlbedoTransparency
+    second: {fileID: 2800000, guid: 64125a3b9c29d7049a24ab44701a74be, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: RunaTierra_DefaultMaterial_Emission
+    second: {fileID: 2800000, guid: ec9569060b159d8428f20b8a7678cec4, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: RunaTierra_DefaultMaterial_MetallicSmoothness
+    second: {fileID: 2800000, guid: 109d35ae3200aa14a9a3402fe38f2449, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: RunaTierra_DefaultMaterial_Normal
+    second: {fileID: 2800000, guid: 8aaa5fb25974cf54ca36162532b64462, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Suelo Tutorial_DefaultMaterial_AlbedoTransparency
+    second: {fileID: 2800000, guid: 217f9fec48757094492806ee13fcebfa, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Suelo Tutorial_DefaultMaterial_MetallicSmoothness
+    second: {fileID: 2800000, guid: c6c09d500de30de4eb4ce2217b2def9e, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Suelo Tutorial_DefaultMaterial_Normal
+    second: {fileID: 2800000, guid: 57b0174f1bfefbe469a39639abedd737, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: "Tabl\xF3n de madera Tuto_DefaultMaterial_AlbedoTransparency"
+    second: {fileID: 2800000, guid: 729b3808161042145ad3170ba9eb7ac3, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: "Tabl\xF3n de madera Tuto_DefaultMaterial_Emission"
+    second: {fileID: 2800000, guid: adc374449f10550469832415d007ae71, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: "Tabl\xF3n de madera Tuto_DefaultMaterial_MetallicSmoothness"
+    second: {fileID: 2800000, guid: d381471844da90d4ab09739d7a1a89f3, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: "Tabl\xF3n de madera Tuto_DefaultMaterial_Normal"
+    second: {fileID: 2800000, guid: f5fb2292ba4976d478f1d7efd77728d8, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Templo2partes_DefaultMaterial_AlbedoTransparency
+    second: {fileID: 2800000, guid: bf180814563a1ac408b98ff1933a506e, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Templo2partes_DefaultMaterial_MetallicSmoothness
+    second: {fileID: 2800000, guid: 4c7af901cdafe7c40bd08d41f18308ad, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Templo2partes_DefaultMaterial_Normal
+    second: {fileID: 2800000, guid: 4bee91cb500cdf84a93c725b5753bf12, type: 3}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 1
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 0
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

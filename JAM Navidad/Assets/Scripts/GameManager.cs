@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour {
     public GameObject pauseMenu, UI;
     public CinemachineFreeLook cinemachineFreeL;
     public PlayerInput playerInput;
-    public Text waterRunes, earthRunes, fireRunes, slothText;
+    public string waterRunes, earthRunes, fireRunes, slothText;
     public Text UIWaterRunes, UIEarthRunes, UIFireRunes, UISlothText;
     public AudioSource playerAS, cameraAS;
     public Slider musicSlider, soundSlider;
@@ -27,11 +27,15 @@ public class GameManager : MonoBehaviour {
         Cursor.lockState = CursorLockMode.Locked;
     }
 
+    private void Start() {
+        OnShowUI();
+    }
+
     private void Update() {
-        UIWaterRunes.text = waterRunes.text;
-        UIEarthRunes.text = earthRunes.text;
-        UIFireRunes.text = fireRunes.text;
-        UISlothText.text = slothText.text;
+        UIWaterRunes.text = waterRunes;
+        UIEarthRunes.text = earthRunes;
+        UIFireRunes.text = fireRunes;
+        UISlothText.text = slothText;
     }
 
     public void OnPause() {
