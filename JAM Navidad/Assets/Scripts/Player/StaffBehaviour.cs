@@ -110,7 +110,7 @@ public class StaffBehaviour : MonoBehaviour {
 
     IEnumerator BackToPlayer() {
         staffParticleSystem.Clear();
-        staffParticleSystem.Stop    ();
+        staffParticleSystem.Stop();
         playerAnim.SetTrigger("Catch");
         objectCollider.enabled = false;
         rB.isKinematic = false;
