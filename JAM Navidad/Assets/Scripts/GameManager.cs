@@ -32,8 +32,9 @@ public class GameManager : MonoBehaviour {
         UISlothText.text = slothText.text;
     }
 
-    void OnPause() {
+    public void OnPause() {
         if (GuideManager.instance.isGuideShowing) {
+            GuideManager.instance.isGuideShowing = false;
             return;
         }
 

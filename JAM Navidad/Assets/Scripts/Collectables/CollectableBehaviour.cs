@@ -13,6 +13,7 @@ public class CollectableBehaviour : MonoBehaviour {
         if (other.CompareTag("Player")) {
             switch (tag) {
                 case "Rune":
+                    other.GetComponent<AudioSource>().PlayOneShot(AudioLibrary.instance.collectRune);
                     CollectableManager.instance.collectables = Collectables.rune;
                     switch (runeType) {
                         case RuneType.earth:
@@ -46,6 +47,7 @@ public class CollectableBehaviour : MonoBehaviour {
                     break;
                 case "BabySloth":
                     CollectableManager.instance.collectables = Collectables.babySloth;
+                    other.GetComponent<AudioSource>().PlayOneShot(AudioLibrary.instance.collectSloth);
                     for (int i = 0; i < CollectableManager.instance.maxSloths; i++) {
                         if (CollectableManager.instance.slothParent.GetChild(i).name == transform.name) {
                             PlayerPrefs.SetInt($"BabySloths{i}", 1);
@@ -57,7 +59,7 @@ public class CollectableBehaviour : MonoBehaviour {
             }
             CollectableManager.instance.CheckCollectable();
             gameObject.SetActive(false);
-            
+
         }
     }
 }

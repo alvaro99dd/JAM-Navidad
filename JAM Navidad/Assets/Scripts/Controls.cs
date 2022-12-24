@@ -62,6 +62,15 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""HideMessage"",
+                    ""type"": ""Button"",
+                    ""id"": ""9746f2ac-e15a-4f49-a61c-906897b11558"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -240,6 +249,17 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                     ""action"": ""Meditate"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2e4d4f1e-018b-400b-9d02-1047bc737e27"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""HideMessage"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -412,6 +432,7 @@ public partial class @Controls : IInputActionCollection2, IDisposable
         m_Movement_Jump = m_Movement.FindAction("Jump", throwIfNotFound: true);
         m_Movement_Roll = m_Movement.FindAction("Roll", throwIfNotFound: true);
         m_Movement_Meditate = m_Movement.FindAction("Meditate", throwIfNotFound: true);
+        m_Movement_HideMessage = m_Movement.FindAction("HideMessage", throwIfNotFound: true);
         // Skills
         m_Skills = asset.FindActionMap("Skills", throwIfNotFound: true);
         m_Skills_Throw = m_Skills.FindAction("Throw", throwIfNotFound: true);
@@ -484,6 +505,7 @@ public partial class @Controls : IInputActionCollection2, IDisposable
     private readonly InputAction m_Movement_Jump;
     private readonly InputAction m_Movement_Roll;
     private readonly InputAction m_Movement_Meditate;
+    private readonly InputAction m_Movement_HideMessage;
     public struct MovementActions
     {
         private @Controls m_Wrapper;
@@ -492,6 +514,7 @@ public partial class @Controls : IInputActionCollection2, IDisposable
         public InputAction @Jump => m_Wrapper.m_Movement_Jump;
         public InputAction @Roll => m_Wrapper.m_Movement_Roll;
         public InputAction @Meditate => m_Wrapper.m_Movement_Meditate;
+        public InputAction @HideMessage => m_Wrapper.m_Movement_HideMessage;
         public InputActionMap Get() { return m_Wrapper.m_Movement; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -513,6 +536,9 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                 @Meditate.started -= m_Wrapper.m_MovementActionsCallbackInterface.OnMeditate;
                 @Meditate.performed -= m_Wrapper.m_MovementActionsCallbackInterface.OnMeditate;
                 @Meditate.canceled -= m_Wrapper.m_MovementActionsCallbackInterface.OnMeditate;
+                @HideMessage.started -= m_Wrapper.m_MovementActionsCallbackInterface.OnHideMessage;
+                @HideMessage.performed -= m_Wrapper.m_MovementActionsCallbackInterface.OnHideMessage;
+                @HideMessage.canceled -= m_Wrapper.m_MovementActionsCallbackInterface.OnHideMessage;
             }
             m_Wrapper.m_MovementActionsCallbackInterface = instance;
             if (instance != null)
@@ -529,6 +555,9 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                 @Meditate.started += instance.OnMeditate;
                 @Meditate.performed += instance.OnMeditate;
                 @Meditate.canceled += instance.OnMeditate;
+                @HideMessage.started += instance.OnHideMessage;
+                @HideMessage.performed += instance.OnHideMessage;
+                @HideMessage.canceled += instance.OnHideMessage;
             }
         }
     }
@@ -629,6 +658,7 @@ public partial class @Controls : IInputActionCollection2, IDisposable
         void OnJump(InputAction.CallbackContext context);
         void OnRoll(InputAction.CallbackContext context);
         void OnMeditate(InputAction.CallbackContext context);
+        void OnHideMessage(InputAction.CallbackContext context);
     }
     public interface ISkillsActions
     {

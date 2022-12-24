@@ -40,14 +40,13 @@ public class GuideManager : MonoBehaviour {
     }
 
     public void HideMessage(InputAction.CallbackContext context) {
-       
 
         if (fireRuneWindow.activeInHierarchy) {
             fireRuneWindow.SetActive(false);
 
             GameManager.instance.cinemachineFreeL.enabled = true;
             GameManager.instance.playerInput.enabled = true;
-            isGuideShowing = false;
+            //isGuideShowing = false;
 
 
             Time.timeScale = 1;
@@ -57,7 +56,7 @@ public class GuideManager : MonoBehaviour {
 
             GameManager.instance.cinemachineFreeL.enabled = true;
             GameManager.instance.playerInput.enabled = true;
-            isGuideShowing = false;
+            //isGuideShowing = false;
 
             Time.timeScale = 1;
         }
@@ -66,7 +65,7 @@ public class GuideManager : MonoBehaviour {
 
             GameManager.instance.cinemachineFreeL.enabled = true;
             GameManager.instance.playerInput.enabled = true;
-            isGuideShowing = false;
+            //isGuideShowing = false;
 
             Time.timeScale = 1;
         }

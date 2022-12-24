@@ -53,6 +53,7 @@ public class CollectableManager : MonoBehaviour {
                 staffThrow = ++currentEarthRunes >= maxEarthRunes;
 
                 if (staffThrow) {
+                    pJ.GetComponent<AudioSource>().PlayOneShot(AudioLibrary.instance.powerUp);
                     GuideManager.instance.ShowMessage("earth");
                     PlayerPrefs.SetInt("Throw", 1);
                 }
@@ -64,6 +65,7 @@ public class CollectableManager : MonoBehaviour {
                 staffTravel = ++currentWaterRunes >= maxWaterRunes;
 
                 if (staffTravel) {
+                    pJ.GetComponent<AudioSource>().PlayOneShot(AudioLibrary.instance.powerUp);
                     GuideManager.instance.ShowMessage("water");
                     PlayerPrefs.SetInt("Travel", 1);
                 }
@@ -75,6 +77,7 @@ public class CollectableManager : MonoBehaviour {
                 staffJump = ++currentFireRunes >= maxFireRunes;
 
                 if (staffJump) {
+                    pJ.GetComponent<AudioSource>().PlayOneShot(AudioLibrary.instance.powerUp);
                     GuideManager.instance.ShowMessage("fire");
                     PlayerPrefs.SetInt("Jump", 1);
                 }
