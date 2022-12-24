@@ -30,6 +30,9 @@ public class StaffBehaviour : MonoBehaviour {
     Coroutine goBack;
     public float goBackTimer;
 
+    [Header("Particles")]
+    public ParticleSystem staffParticleSystem;
+
     private void Awake() {
         rB = GetComponent<Rigidbody>();
         parent = transform.parent;
@@ -99,12 +102,15 @@ public class StaffBehaviour : MonoBehaviour {
             yield return new WaitForEndOfFrame();
         }
         //CheckTag();
+        
         lerping = false;
         objectCollider.enabled = true;
         goBack = StartCoroutine(GoBackCountdown());
     }
 
     IEnumerator BackToPlayer() {
+        staffParticleSystem.Clear();
+        staffParticleSystem.Stop    ();
         playerAnim.SetTrigger("Catch");
         objectCollider.enabled = false;
         rB.isKinematic = false;
@@ -141,6 +147,7 @@ public class StaffBehaviour : MonoBehaviour {
             if (goBack != null) {
                 StopCoroutine(goBack);
             }
+            staffParticleSystem.Play();
             //StopCoroutine(staffCoroutine);
             lerping = false;
             collide = true;

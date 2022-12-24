@@ -25,6 +25,7 @@ public class PlayerController : MonoBehaviour {
     public float colliderCenter;
     [Header("Particles")]
     public GameObject walkParticles;
+    public GameObject dashParticles;
 
 
     public float rollTime;
@@ -93,6 +94,7 @@ public class PlayerController : MonoBehaviour {
             cC.center = new Vector3(0, colliderCenter, 0);
         }
         anim.SetTrigger("Roll");
+        dashParticles.SetActive(true);
         rolling = true;
         float startTime = Time.time;
         Vector3 dir = rollPosition.position - transform.position;
@@ -111,6 +113,7 @@ public class PlayerController : MonoBehaviour {
         cC.height = originalHeight;
         cC.center = new Vector3(0, originalCenter, 0);
         anim.SetTrigger("StopRoll");
+        dashParticles.SetActive(false);
     }
 
     void OnRoll() {
