@@ -60,9 +60,10 @@ public class PlayerController : MonoBehaviour {
         if (direction.magnitude >= 0.1f) {
             if (cC.isGrounded) {
                 walkParticles.SetActive(true);
-                aS.PlayOneShot(AudioLibrary.instance.steps);
-            }
-            else {
+                if (!aS.isPlaying) {
+                    aS.PlayOneShot(AudioLibrary.instance.steps);
+                }
+            } else {
                 walkParticles.SetActive(false);
 
             }
@@ -77,8 +78,7 @@ public class PlayerController : MonoBehaviour {
             }
 
             cC.Move(moveDir * speed * Time.deltaTime);
-        }
-        else {
+        } else {
             walkParticles.SetActive(false);
 
         }
@@ -90,8 +90,7 @@ public class PlayerController : MonoBehaviour {
         anim.ResetTrigger("StopRoll");
         if (!cC.isGrounded) {
             airRolling = true;
-        }
-        else {
+        } else {
             cC.height = colliderHeight;
             cC.center = new Vector3(0, colliderCenter, 0);
         }
@@ -105,8 +104,7 @@ public class PlayerController : MonoBehaviour {
         do {
             if (cC.isGrounded) {
                 dir.y = -4.5f;
-            }
-            else {
+            } else {
                 dir.y = 0f;
             }
             cC.Move(dir * rollSpeed * Time.deltaTime);

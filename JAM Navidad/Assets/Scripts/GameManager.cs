@@ -12,6 +12,8 @@ public class GameManager : MonoBehaviour {
     public PlayerInput playerInput;
     public Text waterRunes, earthRunes, fireRunes, slothText;
     public Text UIWaterRunes, UIEarthRunes, UIFireRunes, UISlothText;
+    public AudioSource playerAS, cameraAS;
+    public Slider musicSlider, soundSlider;
     public float disappearTime;
     Controls c;
 
@@ -64,5 +66,13 @@ public class GameManager : MonoBehaviour {
 
     public void Exit() {
         Application.Quit();
+    }
+
+    public void ChangeMusicVolume() {
+        cameraAS.volume = musicSlider.value;
+    }
+
+    public void ChangeSoundVolume() {
+        playerAS.volume = soundSlider.value;
     }
 }

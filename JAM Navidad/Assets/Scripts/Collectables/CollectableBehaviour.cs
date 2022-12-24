@@ -13,7 +13,6 @@ public class CollectableBehaviour : MonoBehaviour {
         if (other.CompareTag("Player")) {
             switch (tag) {
                 case "Rune":
-                    other.GetComponent<AudioSource>().PlayOneShot(AudioLibrary.instance.collectRune);
                     CollectableManager.instance.collectables = Collectables.rune;
                     switch (runeType) {
                         case RuneType.earth:

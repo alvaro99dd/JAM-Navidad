@@ -56,6 +56,8 @@ public class CollectableManager : MonoBehaviour {
                     pJ.GetComponent<AudioSource>().PlayOneShot(AudioLibrary.instance.powerUp);
                     GuideManager.instance.ShowMessage("earth");
                     PlayerPrefs.SetInt("Throw", 1);
+                } else {
+                    pJ.GetComponent<AudioSource>().PlayOneShot(AudioLibrary.instance.collectRune);
                 }
 
                 GameManager.instance.earthRunes.text = $"{currentEarthRunes} / {maxEarthRunes}";
@@ -68,6 +70,8 @@ public class CollectableManager : MonoBehaviour {
                     pJ.GetComponent<AudioSource>().PlayOneShot(AudioLibrary.instance.powerUp);
                     GuideManager.instance.ShowMessage("water");
                     PlayerPrefs.SetInt("Travel", 1);
+                } else {
+                    pJ.GetComponent<AudioSource>().PlayOneShot(AudioLibrary.instance.collectRune);
                 }
 
                 GameManager.instance.waterRunes.text = $"{currentWaterRunes} / {maxWaterRunes}";
@@ -80,6 +84,8 @@ public class CollectableManager : MonoBehaviour {
                     pJ.GetComponent<AudioSource>().PlayOneShot(AudioLibrary.instance.powerUp);
                     GuideManager.instance.ShowMessage("fire");
                     PlayerPrefs.SetInt("Jump", 1);
+                } else {
+                    pJ.GetComponent<AudioSource>().PlayOneShot(AudioLibrary.instance.collectRune);
                 }
 
                 GameManager.instance.fireRunes.text = $"{currentFireRunes} / {maxFireRunes}";

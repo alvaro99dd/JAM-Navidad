@@ -12,6 +12,7 @@ public class AudioLibrary : MonoBehaviour
     public AudioClip collectRune;
     public AudioClip collectSloth;
     public AudioClip powerUp;
+    public AudioClip button;
 
     public static AudioLibrary instance;
 

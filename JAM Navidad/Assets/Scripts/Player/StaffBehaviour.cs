@@ -18,7 +18,7 @@ public class StaffBehaviour : MonoBehaviour {
     Vector3 tempPosition;
     string tempTag;
     bool lerping;
-    bool comingBack;
+    public bool comingBack;
     public bool collide;
 
     public float throwSpeed;
@@ -104,7 +104,7 @@ public class StaffBehaviour : MonoBehaviour {
             yield return new WaitForEndOfFrame();
         }
         //CheckTag();
-        
+
         lerping = false;
         objectCollider.enabled = true;
         goBack = StartCoroutine(GoBackCountdown());
@@ -137,7 +137,9 @@ public class StaffBehaviour : MonoBehaviour {
     IEnumerator GoBackCountdown() {
         if (!collide) {
             yield return new WaitForSeconds(goBackTimer);
-            StartCoroutine(BackToPlayer());
+            if (Vector3.Distance(transform.position, parent.position) > minDistance) {
+                StartCoroutine(BackToPlayer());
+            }
         }
     }
 
