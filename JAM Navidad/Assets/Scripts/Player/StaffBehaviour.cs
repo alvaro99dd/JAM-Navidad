@@ -11,6 +11,7 @@ public class StaffBehaviour : MonoBehaviour {
     public GameObject thrownStaffMesh;
     public GameObject realStaffMesh;
     public Animator playerAnim;
+    public AudioSource playerAudioSource;
     //AnimationCurve yCurve;
     public Transform staffLimit;
     public Transform reference;
@@ -97,6 +98,7 @@ public class StaffBehaviour : MonoBehaviour {
         lerping = true;
         transform.SetParent(null);
 
+        playerAudioSource.PlayOneShot(AudioLibrary.instance.throwStaff);
         while (Vector3.Distance(transform.position, tempPosition) > minDistance) {
             rB.position = Vector3.MoveTowards(transform.position, tempPosition, time * Time.deltaTime);
             yield return new WaitForEndOfFrame();
@@ -118,6 +120,7 @@ public class StaffBehaviour : MonoBehaviour {
         tempPosition = parent.position;
         transform.rotation = Quaternion.Euler(Vector3.zero);
 
+        playerAudioSource.PlayOneShot(AudioLibrary.instance.throwStaff);
         while (Vector3.Distance(transform.position, tempPosition) > minDistance) {
             tempPosition = parent.position;
             rB.position = Vector3.MoveTowards(transform.position, tempPosition, time * Time.deltaTime);

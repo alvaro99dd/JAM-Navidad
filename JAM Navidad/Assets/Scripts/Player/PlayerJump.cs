@@ -44,6 +44,7 @@ public class PlayerJump : MonoBehaviour {
         }
 
         if (jumpPressed && (groundedPlayer || airJump)) {
+            pC.aS.PlayOneShot(AudioLibrary.instance.jump);
             if (!pC.rolling) {
                 if (CollectableManager.instance.staffJump && transform.Find("StaffHolder").childCount > 0 && !airJump) {
                     pC.anim.SetTrigger("Staff");

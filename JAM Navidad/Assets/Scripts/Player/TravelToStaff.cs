@@ -41,6 +41,7 @@ public class TravelToStaff : MonoBehaviour
         pC.enabled = false;
         pJ.enabled = false;
         Physics.IgnoreLayerCollision(6, 7, true);
+        pC.aS.PlayOneShot(AudioLibrary.instance.travel);
         while (!collision) {
             playercC.Move(dir * timeToTravel * Time.deltaTime);
             yield return new WaitForEndOfFrame();
