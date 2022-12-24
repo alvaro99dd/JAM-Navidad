@@ -6,6 +6,7 @@ using Cinemachine;
 public class PlayerController : MonoBehaviour {
     Controls c;
     CharacterController cC;
+    public AudioSource aS;
     public Animator anim;
     float originalCenter;
     float originalHeight;
@@ -40,6 +41,7 @@ public class PlayerController : MonoBehaviour {
         originalCenter = cC.center.y;
         originalHeight = cC.height;
         anim = GetComponentInChildren<Animator>();
+        aS = GetComponent<AudioSource>();
     }
 
     private void Update() {
@@ -58,7 +60,7 @@ public class PlayerController : MonoBehaviour {
         if (direction.magnitude >= 0.1f) {
             if (cC.isGrounded) {
                 walkParticles.SetActive(true);
-
+                aS.PlayOneShot(AudioLibrary.instance.steps);
             }
             else {
                 walkParticles.SetActive(false);
@@ -99,6 +101,7 @@ public class PlayerController : MonoBehaviour {
         float startTime = Time.time;
         Vector3 dir = rollPosition.position - transform.position;
         dir.Normalize();
+        aS.PlayOneShot(AudioLibrary.instance.roll);
         do {
             if (cC.isGrounded) {
                 dir.y = -4.5f;
