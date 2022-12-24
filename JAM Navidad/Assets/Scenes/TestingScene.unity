@@ -12813,7 +12813,7 @@ MonoBehaviour:
   thrownStaffMesh: {fileID: 563993905}
   realStaffMesh: {fileID: 690499288}
   playerAnim: {fileID: 690499287}
-  playerAudioSource: {fileID: 0}
+  playerAudioSource: {fileID: 1705500158}
   staffLimit: {fileID: 1434499387}
   reference: {fileID: 448535712}
   collide: 0
@@ -26919,7 +26919,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 504226523}
-  m_LocalRotation: {x: 0.03918777, y: -0.02556694, z: 0.0010030104, w: 0.9989042}
+  m_LocalRotation: {x: 0.039187793, y: -0.02557037, z: 0.0010031456, w: 0.99890417}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -29417,7 +29417,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 586213497}
-  m_LocalRotation: {x: 0.092168294, y: 0.00000002569971, z: -0.000000002378824, w: 0.99574345}
+  m_LocalRotation: {x: 0.092168294, y: -0.00000002569971, z: 0.000000002378824, w: 0.99574345}
   m_LocalPosition: {x: 1.57, y: 6.28, z: -4.6899996}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -79814,13 +79814,14 @@ MonoBehaviour:
   speed: 10
   turnSmoothTime: 0.05
   turnSmoothVelocity: 0
+  rollDuration: 2
   rollSpeed: 15
   rolling: 0
   colliderHeight: 0.5
   colliderCenter: -0.7
   walkParticles: {fileID: 883287139}
   dashParticles: {fileID: 790657517}
-  rollTime: 30
+  rollTime: 0.6
   airRolling: 0
 --- !u!143 &1705500154
 CharacterController:
@@ -89378,7 +89379,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1970419412}
-  m_LocalRotation: {x: 0.092168294, y: 0.000000012849858, z: -0.0000000011894123, w: 0.99574345}
+  m_LocalRotation: {x: 0.092168294, y: -0.000000012849852, z: 0.0000000011894118, w: 0.99574345}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

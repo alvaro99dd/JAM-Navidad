@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour {
     public float turnSmoothTime;
     public float turnSmoothVelocity;
     [Header("Roll")]
+    public float rollDuration;
     public float rollSpeed;
     public bool rolling;
     public float colliderHeight;
@@ -45,7 +46,6 @@ public class PlayerController : MonoBehaviour {
     }
 
     private void Update() {
-
         MovePlayer();
 
         anim.SetBool("Grounded", cC.isGrounded);
@@ -110,8 +110,8 @@ public class PlayerController : MonoBehaviour {
                 dir.y = 0f;
             }
             cC.Move(dir * rollSpeed * Time.deltaTime);
-            yield return new WaitForEndOfFrame();
-        } while (Time.time < startTime + rollTime * Time.deltaTime);
+            yield return null;
+        } while (Time.time < startTime + rollTime);
         rolling = false;
         cC.height = originalHeight;
         cC.center = new Vector3(0, originalCenter, 0);
